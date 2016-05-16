@@ -1,0 +1,13 @@
+.container {
+display: table;
+}
+.row {
+display: table-column;
+}
+.cell {
+display: table-cell;
+width: 100px;
+height: 100px;
+border: 1px solid blue;
+padding: 1em;
+}
