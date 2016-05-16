@@ -1,1 +1,1 @@
-[ÍøÒ³µØÖ·£ºhttp://fanyear.github.io/BaiduWebMission/Mission%202/2.html](http://fanyear.github.io/BaiduWebMission/Mission%202/2.html)
+ç½‘é¡µé“¾æ¥ï¼š[http://fanyear.github.io/BaiduWebMission/Mission%202/index.html](http://fanyear.github.io/BaiduWebMission/Mission%202/index.html)
