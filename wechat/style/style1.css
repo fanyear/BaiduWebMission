@@ -15,7 +15,7 @@ body
   width: 40%;
   height: auto;;
   background-color: #fff;
-  min-width: 400px;
+  min-width: 600px;
 
 }
 
@@ -118,11 +118,11 @@ body
 }
 .photo
 {
-  width: 50%;
-  max-width: 180px;
-  min-width: 90px;
-  padding-right: 5px;
-  padding-top: 5px;
+  width: 150px;
+  height: 200px;
+  background-position: center center;
+  background-size: cover;
+  border: 1px #fff solid;
 }
 .more
 {
