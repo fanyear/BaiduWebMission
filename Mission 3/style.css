@@ -1,0 +1,76 @@
+body
+{
+  margin: 0;
+  padding: 30px;
+  font-family: cursive;
+  font-size: 1.2em;
+}
+
+.frame
+{
+  margin: 0px;
+  padding: 20px;
+  background-color: #eee;
+  border: #aaa 2px solid;
+  height: 430px;
+  position: relative;
+  min-width: 700px;
+}
+
+.team
+{
+  position: absolute;
+  left: 20px;
+
+  /*float: left;*/
+  height: 120px;
+  background-color: white;
+  width: 200px;
+  border: #aaa 2px solid;
+
+
+}
+.team img
+{
+  float: left;
+  width: 50%;
+  margin: 15px;
+}
+
+
+.introducion
+{
+  /*float: left;*/
+  position: absolute;
+  right: 170px;
+  left: 240px;
+  text-indent: 2em;
+  height:420px;
+  background-color: white;
+  width:auto;
+  border: #aaa 2px solid;
+  overflow: auto;
+  padding: 0px 20px 0px 20px;
+}
+
+
+
+.logo
+{
+    /*float: right;*/
+
+  position: absolute;
+  right: 20px;
+  width: 120px;
+  height: auto;;
+  background-color: white;
+  border: #aaa 2px solid;
+  text-align: center;
+  padding: 5px;
+}
+.logo img
+{
+  width: 75%;
+  margin: 5px;
+  border: #aaa 2px solid;
+}
