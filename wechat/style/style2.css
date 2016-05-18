@@ -1,0 +1,116 @@
+body
+{
+  display: block;
+  margin: 0px;
+  font-family: "Microsoft Yahei";
+	font-size: 16px;
+  background: #000;
+}
+.frame
+{
+  width: 500px;
+  height: auto;
+  background-color: white;
+  margin: 0 auto;
+}
+.top
+{
+  height: 50px;
+  width: 100%;
+  background-color: #555;
+}
+.cancel
+{
+  float: left;
+  line-height: 50px;
+  color: white;
+  margin-left: 20px;
+  font-size: 20px;
+}
+.send
+{
+  float: right;
+  line-height: 50px;
+  color:#00EE00;
+  margin-right: 20px;
+  font-size: 20px;
+}
+.article
+{
+
+  height: 200px;
+  margin-left: 30px;
+  padding-top: 20px;
+}
+.article textarea
+{
+  color: #aaa;
+  font-size: 20px;
+  width: 98%;
+  height: 100%;
+  overflow:hidden;;
+  background-attachment:    fixed;
+  background-repeat:   no-repeat;
+  border-style:   solid;
+  border-color:   #FFFFFF;
+}
+.photos
+{
+  margin-left: 30px;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 10px 10px 10px;
+}
+.photo
+{
+  width: 100px;
+  height: 100px;
+  background-position: center center;
+  background-size: cover;
+  border: 1px #ccc solid;
+  margin-right: 20px;
+}
+.position
+{
+  height: 60px;
+  margin-left: 30px;
+
+  font-size: 25px;
+}
+.position p
+{
+  display: inline;
+  line-height: 60px;
+}
+.small
+{
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  background-position: center center;
+  background-size:contain;
+  border: 1px #fff solid;
+  margin-right: 20px;
+  float: left;
+}
+.line
+{
+  height: 40px;
+  width: 100%;
+  background-color: #eee;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.bottom
+{
+  width: auto;
+  height: 100px;
+  background-color: #eee;
+}
+.position[al="line"]
+{
+    border-bottom: 1px solid #ddd;
+}
+.function
+{
+  border-bottom: 1px solid #ddd;
+}
