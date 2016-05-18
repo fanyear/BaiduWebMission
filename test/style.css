@@ -1,11 +1,2 @@
-
-.row {
-display: table-
-}
-.cell {
-display: table-cell;
-width: 100px;
-height: 100px;
-border: 1px solid blue;
-padding: 1em;
-}
+div { border: solid red;  max-width: 70ex; }
+  h4  { float: left;  margin: 0px;}
