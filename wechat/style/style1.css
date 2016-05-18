@@ -12,7 +12,7 @@ body
 .frame
 {
   margin: 0 auto;
-  width: 40%;
+  width: auto;;
   height: auto;;
   background-color: #fff;
   min-width: 600px;
