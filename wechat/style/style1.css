@@ -14,8 +14,7 @@ body
   width: auto;;
   height: auto;;
   background-color: #fff;
-  min-width: 600px;
-
+  min-width: 300px;
 }
 
 .top
@@ -33,7 +32,8 @@ body
   line-height: 50px;
   color: #fff;
 }
-.top img
+
+.top input
 {
   width: 40px;
   position: absolute;
@@ -47,8 +47,6 @@ body
   width: auto;
   border-bottom: #ccc 1px solid;
   position:relative;
-
-
 }
 .head
 {
@@ -59,7 +57,6 @@ body
 .content
 {
   margin-left: 70px;
-
   padding-bottom: 10px;
 
 }
@@ -112,23 +109,27 @@ body
 }
 .photo_frame
 {
-  display: block;
   padding-bottom: 10px;
 }
 .photo
 {
-  width: 150px;
-  height: 200px;
+  width: 100px;
+  max-width: 130px;
+  min-width: 60px;
+  height: 100px;
+  max-height: 100px;
   background-position: center center;
-  background-size: cover;
+  background-size:cover;
   border: 1px #fff solid;
 }
 .more
 {
   padding: 30px 0px 20px 0px;
 }
-.more p
+.more a
 {
+  text-decoration: none;
+  color: #000;
   display: block;
   margin: 0 auto;
   width: 300px;
