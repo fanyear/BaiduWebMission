@@ -1,0 +1,209 @@
+body
+{
+  background-color: #ccc; /*ccc*/
+  margin: 0px;
+  border: 0px;
+  font-size: 14px;
+  margin-top: -15px;
+  min-width: 800px;
+  font-family: cursive;
+  word-break: break-all;
+}
+
+.top
+{
+    height: 50px;
+    background-color: #222;
+    width: 100%;
+    min-width: 600px;
+}
+
+
+img[alt="logo"]
+{
+    float: left;
+    margin-left: 30px;
+    padding-top: 5px;
+}
+li a
+{
+  text-decoration: none;
+  font-size: 0.8em;
+}
+li a:link
+{
+  color: #fff;
+}
+li a:visited
+{
+  color: gray;
+}
+
+
+.top-list li
+{
+  float: right;
+  list-style-type: disc;
+  margin-right: 50px;
+  padding-top: 20px;
+}
+.frame
+{
+   
+  margin: 20px 420px 20px 20px;
+}
+
+.one,.two,.three,.four
+{
+  border-right: 2.5px gray solid;
+  border-bottom: 2.5px gray solid;
+  margin: 20px 0px 0px 0px;
+  padding: 20px;
+  width: auto;
+  min-width: 400px;
+  background-color: white;
+
+}
+.five_frame
+{
+  position: absolute;
+  top:70px;
+  right: 10px;
+  height: 100%;
+}
+.five
+{
+  width: 350px;
+  border-right: 2.5px gray solid;
+  border-bottom: 2.5px gray solid;
+  margin: 0px 0 20px 0px;
+  padding: 20px;
+  background-color: white;
+
+}
+h4,h6
+{
+  color:gray;
+
+}
+
+p[alt="indent"]
+{
+  text-indent: 2em;
+}
+
+.printer
+{
+  width:  35%;
+}
+.list2
+{
+  list-style: none;
+}
+.pic
+{
+  border: 1px gray solid;
+  text-align: center;
+  width: 230px;
+  margin-bottom:  20px;
+  margin-left: 50px;
+}
+.pic img
+{
+  width: 200px;
+  border: 1px gray solid;
+  margin: 10px;
+
+
+}
+.pic p
+{
+  margin: 0px;
+  padding-top:  10px;
+}
+
+.four table
+{
+  width:100%;
+  border-collapse:collapse;
+  text-align: left;
+}
+.four table td,th
+{
+  border: 1px solid gray;
+}
+.four table th
+{
+  background-color: #000;
+  color: white;
+}
+.summery
+{
+  background-color: gray;
+}
+.aside_window_title
+{
+  border-left: 3px solid gray;
+  padding-left: 15px;
+  color: black;
+}
+.gray
+{
+  color:gray;
+}
+.bottom
+{
+  width: 100%;
+  background-color: black;
+  height: 60px;
+  text-align: center;
+  color: white;
+}
+.bottom p
+{
+  padding: 15px;
+  min-width: 960px;
+  margin-bottom: -30px;
+}
+.aside_table tr td:first-child
+{
+  text-align:right;
+  width: 130px;
+  height: 30px;
+}
+
+.short
+{
+  width:auto;
+  min-width: 32px;
+}
+.short[alt="text_right"]
+{
+  text-align: right;
+}
+.short[alt="select_right"]
+{
+  position: relative;
+  left:21px;
+}
+.introduction td
+{
+  vertical-align: top;
+}
+.introduction td:first-child
+{
+  text-align:right;
+  width: 130px;
+  height: 30px;
+}
+.submit
+{
+  width: 100%;
+  background-color: #3366ff;
+  height: 40px;
+  color: white;
+  font-size: 1.2em;
+  margin-top:  20px;
+  border-radius: 20px;
+  border: none;
+}
