@@ -1,0 +1,10 @@
+学习笔记：
+  1.学会使用 min-width
+  2.列表合并 colspan
+  3.border-radius
+  4.placeholder (用于textarea)
+  5.margin width 通过百分比定位
+
+Q：
+  cursor: pointer
+  box-shadow

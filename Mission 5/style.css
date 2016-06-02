@@ -49,7 +49,7 @@ li a:visited
 }
 .frame
 {
-   
+
   margin: 20px 420px 20px 20px;
 }
 
@@ -60,15 +60,14 @@ li a:visited
   margin: 20px 0px 0px 0px;
   padding: 20px;
   width: auto;
-  min-width: 400px;
+  min-width: 300px;
   background-color: white;
 
 }
 .five_frame
 {
-  position: absolute;
-  top:70px;
-  right: 10px;
+  float: right;
+  margin: 20px 20px 0px 0px;
   height: 100%;
 }
 .five
@@ -79,7 +78,6 @@ li a:visited
   margin: 0px 0 20px 0px;
   padding: 20px;
   background-color: white;
-
 }
 h4,h6
 {

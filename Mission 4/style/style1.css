@@ -9,15 +9,13 @@ body
   display: table-cell;
   vertical-align: middle;
   border: 2px solid #ccc;
-  position: relative;
 }
 .box
 {
   width: 400px;
   height: 200px;
   background-color: #ccc;
-  margin-left: auto;
-  margin-right:auto;
+  margin:  auto auto;
   position: relative;
   overflow: hidden;
 }
