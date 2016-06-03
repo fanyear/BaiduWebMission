@@ -1,15 +1,8 @@
-.container {
-  display: table;
-}
-
-.row {
-  display: table-row;
-}
-
-.cell {
-  display: table-cell;
-  width: 100px;
-  height: 100px;
-  border: 1px solid blue;
-  padding: 1em;
+div{
+    width: 0px;
+    height: 0px;
+   border-top: 0px solid red;
+   border-right: 300px solid blue;
+   border-bottom: 100px solid green;
+   border-left: 300px solid yellow;
 }
