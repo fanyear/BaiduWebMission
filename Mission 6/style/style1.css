@@ -3,6 +3,7 @@ body
   margin: 0px;
   padding: 0px 44px;
   width: 892px;
+  min-width: 892px;
   height: 1382px;
 }
 .font1
@@ -221,7 +222,6 @@ percent
 }
 .article1 p:first-letter
 {
-  color: red;
   font-size: 70px;
   color: #f5e327;
   float: left;
