@@ -5,6 +5,7 @@ body
   font-family: "黑体";
   background-color: #fff;
   min-width: 600px;
+  text-align: center;
 }
 .p1
 {
@@ -18,6 +19,75 @@ body
 {
   background: url(img/3.png);
 }
+.p4
+{
+  background: url(img/4.png);
+}
+.p5
+{
+  background: url(img/5.png);
+}
+.p6
+{
+  background: url(img/6.png);
+}
+.p7
+{
+  background: url(img/7.png);
+}
+.p8
+{
+  background: url(img/8.png);
+}
+.p9
+{
+  background: url(img/9.png);
+}
+.p10
+{
+  background: url(img/10.png);
+}
+.p11
+{
+  background: url(img/11.png);
+}
+.p12
+{
+  background: url(img/12.png);
+}
+.p13
+{
+  background: url(img/13.png);
+}
+.p14
+{
+  background: url(img/14.png);
+}
+.p15
+{
+  background: url(img/15.png);
+}
+.p16
+{
+  background: url(img/16.png);
+}
+.p17
+{
+  background: url(img/17.png);
+}
+.p18
+{
+  background: url(img/18.png);
+}
+.p19
+{
+  background: url(img/19.png);
+}
+.p20
+{
+  background: url(img/20.png);
+}
+
 .step
 {
   width: auto;
