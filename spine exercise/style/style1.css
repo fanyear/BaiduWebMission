@@ -1,0 +1,45 @@
+body
+{
+  font-size: 25px;
+  color: #999;
+  font-family: "黑体";
+  background-color: #fff;
+  min-width: 600px;
+}
+.p1
+{
+  background: url(img/1.png);
+}
+.p2
+{
+  background: url(img/2.png);
+}
+.p3
+{
+  background: url(img/3.png);
+}
+.step
+{
+  width: auto;
+  text-align: center;
+}
+.frame
+{
+  box-shadow: 0px 0px 10px 2px #aaa;
+  display: inline-block;
+  width: auto;
+    border: 2px solid #eee;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.img
+{
+  display: inline-block;
+  width: 500px;
+  height: 400px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position:50% 30%;
+}

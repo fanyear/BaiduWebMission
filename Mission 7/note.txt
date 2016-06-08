@@ -1,0 +1,3 @@
+笔记：
+  1.进一步熟练定位等的使用
+  2.input,textarea,select的使用有待提高
