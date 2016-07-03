@@ -1,0 +1,173 @@
+body
+{
+  font-size: 14px;
+  margin: 0px;
+  font-family: "微软雅黑";
+}
+.top
+{
+  height: 60px;
+  width: 100%;
+  background-color: #0066cc;
+  vertical-align: middle;
+  display: table;
+}
+.top-image
+{
+  height: 100%;
+  width: 60px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.top-image img
+{
+  padding-left: 120px;
+}
+.search
+{
+  height: 100%;
+  display: table-cell;
+  vertical-align:middle;
+  text-align: right;
+  padding-right: 10px;
+}
+.register
+{
+  width: 150px;
+  padding-left: 10px;
+  height: 100%;
+  display: table-cell;
+  color: #fff;
+  vertical-align:middle;
+}
+.register span
+{
+  position: relative;
+  top:1px;
+  padding-left: 2px;
+}
+.input-frame
+{
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  border: none;
+  height: 25px;
+  width: 200px;
+  background-color: #fff;
+  position: relative;
+
+}
+.input-frame input
+{
+  position: absolute;
+  top:10%;
+  left: 8%;
+  outline: none;
+  border: none;
+}
+.sidebar
+{
+  text-align: center;
+  background-color: #666;
+ height: 900px;
+}
+.homepage
+{
+  height: 900px;
+  background-color: #ccc;
+}
+.head-portrait
+{
+  margin: 50px 0px 10px 0px;;
+  display: inline-block;
+  width: 150px;
+}
+.photo
+{
+  float: left;
+  display: inline-block;
+  padding: 3px;
+  width: 70px;
+  height: 70px;
+  border: #ccc solid 3px;
+  border-radius: 35px;
+}
+.photo a
+{
+  display: inline-block;
+  background-color: #ccc;
+  border-radius: 35px;
+  width: 100%;
+  height: 100%;
+}
+.user a
+{
+  display: inline-block;
+  margin-top: 25px;
+  color: #fff;
+}
+.fun
+{
+  margin-top: 20px;
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+}
+.fun a
+{
+  color: #aaa;
+}
+.collection
+{
+  height: 100%;
+  width: 50%;
+  box-sizing: border-box;
+  float: left;
+}
+.list
+{
+  text-align: left;
+  list-style: none;
+}
+.list ul
+{
+  padding-left: 20%;
+}
+ul
+{
+  padding: 0px;
+  list-style:none;
+  margin: 10px 0px;
+}
+li
+{
+  display: block;
+  margin: 10px 0px;
+  line-height: 30px;
+}
+.list a:hover
+{
+  color: #fff;
+  text-decoration: none;
+}
+.list ul ul
+{
+  display: none;
+}
+.list li:hover>ul
+{
+  display: block;
+}
+ul a
+{
+  color: #aaa;
+}
+.register a
+{
+  color: #fff;
+}
+.register a:hover
+{
+  text-decoration: none;
+}
