@@ -3,6 +3,7 @@ body
   font-size: 14px;
   margin: 0px;
   font-family: "微软雅黑";
+  min-width: 1400px;
 }
 .top
 {
@@ -70,12 +71,14 @@ body
 {
   text-align: center;
   background-color: #666;
- height: 900px;
+ height: 1300px;
+ min-width: 200px;
 }
 .homepage
 {
-  height: 900px;
-  background-color: #ccc;
+  min-width: 1200px;
+  height: 1300px;
+  background-color: #eee;
 }
 .head-portrait
 {
@@ -170,4 +173,447 @@ ul a
 .register a:hover
 {
   text-decoration: none;
+}
+.navigation ul
+{
+  list-style: none;
+  margin: 0px;
+  padding-left: 20px;
+}
+.navigation li
+{
+  float: left;
+  margin: 0px;
+  height: 35px;
+  line-height: 35px;
+  padding: 0px 5px;
+}
+.navigation
+{
+  background-color:  #fff;
+  overflow: hidden;
+}
+.navigation .next:before
+{
+  content: " / ";
+  color: #aaa;
+}
+.navigation .before
+{
+  color: #aaa;
+}
+.current_page
+{
+  color:#0066cc;
+}
+.content
+{
+  height: 200px;
+  margin: 0px 30px;
+
+}
+.search_list
+{
+  background-color: #fff;
+  height: 100px;
+  padding: 0px 20px;
+  margin: 20px 0px 0px 0px;
+}
+.search_list span
+{
+  color: #888;
+  margin-left: 10px;
+}
+.sp
+{
+  padding: 20px 10px;
+  height: 100px;
+}
+.sp select
+{
+  border: 2px #aaa solid;
+  padding: 0px;
+  margin-left: 10px;
+}
+.seller,.consumer
+{
+  width: 100px;
+}
+.part_two img
+{
+  position: relative;
+  top:-45px;
+  left: 160px;
+}
+.blanket
+{
+  height: 5px;
+}
+.timeuse
+{
+  width: 70px;
+}
+.num
+{
+  width: 70px;
+}
+.deal
+{
+  width: 100px;
+}
+.search_btn
+{
+  width: 60px;
+  height: 30px;
+  background-color: #0066cc;
+  text-align: center;
+  border-radius: 6px;
+  margin-top: 12px;
+}
+.search_btn a
+{
+  margin: 0px;
+  line-height: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+.part_two
+{
+  padding-left: 30px;
+}
+.select_date
+{
+  padding: 0px;
+  margin-top: 10px;
+  height: 80px;
+  text-align: center;
+}
+
+.select_date div
+{
+  background-color: #fff;
+  border: 1px solid #eee;
+  height: 80px;
+  float: left;
+  margin-right: 10px;
+}
+.lefta,.righta
+{
+  width: 50px;
+  color: #eee;
+  font-size: 25px;
+  line-height: 80px;
+}
+.select_date a
+{
+  text-decoration: none;
+}
+.select_date .date
+{
+  width: 130px;
+}
+.select_date .date:hover
+{
+  border-top: #0066cc 4px solid;
+}
+.select_date .histroy_search
+{
+  width: 167px;
+  margin: 0px;
+}
+.histroy_search a
+{
+  line-height: 80px;
+}
+.date span
+{
+  display: inline-block;
+  margin-top: 15px;
+}
+.symbol
+{
+  color: #aaa;
+  font-size: 20px;
+  line-height: 18px;
+}
+.symbol num
+{
+  color: orange;
+  font-size: 25px;
+}
+.l
+{
+  margin-top: 15px;
+  font-weight:  bold;
+}
+.summary
+{
+  height: 80px;
+}
+.summary-part
+{
+  padding: 0px;
+  height: 80px;
+}
+.summary-inner
+{
+  width: 250px;
+  height: 80px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+.summary-inner span2
+{
+  color: #aaa;
+  display: inline-block;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.summary-inner span
+{
+  font-weight: bolder;
+  display: inline-block;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+.summary-inner .rbox
+{
+  width: 70px;
+  height: 40px;
+  float: right;
+  margin-top: 22px;
+  margin-right: 15px;
+}
+.line-one
+{
+  margin-top: 20px;
+  height: 300px;
+}
+.table
+{
+  height: 350px;
+  border-radius: 15px;
+  border: 2px solid #aaa;
+  display: inline-block;
+  margin-bottom: 10px;
+  background-color: #fff;
+  overflow: hidden;
+
+}
+.t1
+{
+  position: relative;
+  width: 60%;
+  float: left;
+  z-index:10;
+}
+.t2
+{
+  width: 39%;
+  float: right;
+}
+.t3
+{
+  width: 39%;
+  float: left;
+  height: 450px;
+}
+.t4
+{
+  width: 60%;
+  float: right;
+  height: 450px;
+}
+.table span
+{
+  height: 50px;
+  background-color: #eee;
+  display: block;
+  color: #888;
+  font-size: 15px;
+  line-height: 60px;
+  padding-left: 20px;
+
+}
+.t1 project
+{
+  margin-top: 20px;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 2px;
+  display: inline-block;
+  line-height: 30px;
+  border: 2px solid #ccc;
+}
+.first
+{
+margin-left:20px;
+}
+.t1 project:hover
+{
+  background-color: #fff;
+  border-bottom: 2px #fff solid;
+}
+.table-date
+{
+  margin-left: 20px;
+  width: 600px;
+  height: 200px;
+  border: 2px #ccc solid;
+  position: relative;
+  top: -2px;
+   z-index:-5;
+}
+.table1
+{
+  position: relative;
+  top: 0px;
+  left: 100px;
+  width: 400px;
+  height: 160px;
+  margin-top: 20px;
+}
+.first:hover>.table1
+{
+  display: block;
+}
+.table1 td
+{
+  border: 1px #ccc solid;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+}
+.table1 td:hover
+{
+  background-color: #ccc;
+}
+.table-content
+{
+  margin-left: 20px;
+  height: 250px;
+}
+.gray
+{
+  color: #ccc;
+}
+.content1
+{
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-right: 40px;
+  border-bottom: 1px solid #eee;
+
+}
+.content2-1
+{
+  padding-left: 20px;
+  width: 30%;
+  float: left;
+  display: inline-block;
+  border-bottom: 1px solid #eee;
+  padding: 5px 20px;
+}
+.content2-2
+{
+  padding-left: 20px;
+  display: inline-block;
+  width: 69%;
+  float: left;
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+  padding: 5px 20px;
+}
+.content3-1
+{
+  padding: 15px 20px;
+  clear: both;
+  height: 100px;
+  border-bottom: 1px solid #eee;
+  width: 90%;
+}
+.content4
+{
+  padding: 10px 20px;
+}
+.content4 input
+{
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 0px;
+  position: relative;
+  top: 2px;
+}
+.content4>.search_btn
+{
+  float: right;
+  margin:0px;
+  margin-right: 5%;
+}
+.calendar
+{
+  padding: 5px 20px;
+}
+.calendar-table
+{
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+.calendar-tr
+{
+  border-top: 1px #00aacc solid;
+  border-bottom: 1px #ccc solid;
+}
+.calendar-table td
+{
+  height: 50px;
+
+}
+.red
+{
+  color:red;
+}
+.black
+{
+  color: #000;
+}
+.calendar-table td:hover
+{
+  border: 2px yellow solid;
+}
+.t4-table
+{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  text-align: center;
+}
+.t4-table td
+{
+  border: 2px #ccc solid;
+  height: 30px;
+}
+.t4-table tr:hover
+{
+  background-color: #eee;
+}
+.t4-table span
+{
+  width: 0px;
+  height: 0px;
+  border-top:  4px red solid;
+  border-left: 120px red solid;
+  margin-left:  20px;
+  display: inline-block;
+  position: relative;
+  top: -3px;
+}
+.left
+{
+  text-align: left;
+  padding-left: 30px;
 }
