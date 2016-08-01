@@ -1,46 +1,37 @@
-* {
-margin: 0;
-padding: 0;
-}
 body {
-padding: 50px 50px;
+    margin: 0;
+    padding: 0;
 }
-.btn-select {
-position: relative;
-display: inline-block;
-width: 150px;
-height: 25px;
-background-color: #f80;
-font: 14px/20px "Microsoft YaHei";
-color: #fff;
+ul {
+    margin: 0;
+    padding: 0;
 }
-.btn-select .cur-select {
-position: absolute;
-display: block;
-width: 150px;
-height: 25px;
-line-height: 25px;
-background: #f80 url(ico-arrow.png) no-repeat 125px center;
-text-indent: 10px;
+li {
+    list-style: none;
 }
-.btn-select:hover .cur-select {
-background-color: #f90;
+
+.flex-container {
+    /* We first create a flex layout context */
+    display: flex;
+    /* Then we define the flow direction and if we allow the items to wrap
+    * Remember this is the same as:
+    * flex-direction: row;
+    * flex-wrap: wrap;
+    */
+    flex-flow: row wrap-reverse;
+    ;
+    /* Then we define how is distributed the remaining space */
+    justify-content: space-around;
 }
-.btn-select select {
-position: absolute;
-top: 0;
-left: 0;
-width: 150px; 
-height: 25px;
-opacity: 0;
-filter: alpha(opacity: 0;);
-font: 14px/20px "Microsoft YaHei";
-color: #f80;
-}
-.btn-select select option {
-text-indent: 10px;
-}
-.btn-select select option:hover {
-background-color: #f80;
-color: #fff;
+.flex-item {
+    background: tomato;
+    padding: 5px;
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
 }

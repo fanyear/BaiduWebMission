@@ -5,6 +5,19 @@ body
   font-family: "微软雅黑";
   min-width: 1400px;
 }
+.sidebar
+{
+  text-align: center;
+  background-color: #666;
+ height: 1300px;
+ min-width: 200px;
+}
+.homepage
+{
+  min-width: 1200px;
+  height: 1300px;
+  background-color: #eee;
+}
 .top
 {
   height: 60px;
@@ -67,19 +80,7 @@ body
   outline: none;
   border: none;
 }
-.sidebar
-{
-  text-align: center;
-  background-color: #666;
- height: 1300px;
- min-width: 200px;
-}
-.homepage
-{
-  min-width: 1200px;
-  height: 1300px;
-  background-color: #eee;
-}
+
 .head-portrait
 {
   margin: 50px 0px 10px 0px;;
@@ -616,4 +617,9 @@ margin-left:20px;
 {
   text-align: left;
   padding-left: 30px;
+}
+.select_date
+{
+  margin-left: auto;
+  margin-right: auto;
 }
