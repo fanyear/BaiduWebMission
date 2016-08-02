@@ -1,0 +1,39 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+.flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.flex div {
+    width: 150px;
+    margin: 20px;
+}
+.one {
+    border: 2px red solid;
+    height: 120px;
+}
+.two {
+    border: 2px red solid;
+    height: 100px;
+}
+.three {
+    border: 2px red solid;
+    height: 40px;
+}
+.four {
+    border: 2px blue solid;
+    height: 200px;
+}
+@media all and (max-width: 640px)
+{
+  .flex
+  {
+    flex-flow: row wrap;
+  }
+  .four{
+    order: -1;
+  }
+}
