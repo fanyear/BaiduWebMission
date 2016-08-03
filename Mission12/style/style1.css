@@ -1,0 +1,68 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #000;
+}
+.round div {
+    background-color: #439;
+}
+.one {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    display: inline-block;
+    border-radius: 100px;
+}
+.two {
+    width: 100px;
+    height: 200px;
+    margin: 30px;
+    border-radius: 100px 0px 0px 100px;
+    display: inline-block;
+}
+.three {
+    width: 200px;
+    height: 100px;
+    margin: 30px;
+    display: inline-block;
+    border-radius: 100px 100px 0px 0px;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #284;
+    margin: 30px;
+    box-shadow: 4px 2px 20px 10px #129, -4px -2px 20px 10px #432, 5px 1px 6px 4px red inset;
+}
+.border {
+    margin: 60px;
+    background: #F4FFFA;
+    width: 210px;
+    height: 210px;
+    border: 70px solid #ddd;
+    border-image: url(border.jpg) 70 repeat;
+}
+
+.transparent
+{
+  width: 200px;
+  height: 100px;
+  background-color: rgba(2,123,2,0.3);
+  margin: 30px;
+}
+.gradient
+{
+  width: 400px;
+  height: 100px;
+  margin: 30px;
+  background-image:linear-gradient(to left, red, orange,yellow,green,blue,indigo,violet);
+}
+.text
+{
+  width: 200px;
+  height: 100px;
+  color: #fff;
+  background-color: #231;
+  margin: 30px;
+  overflow: hidden;
+}
