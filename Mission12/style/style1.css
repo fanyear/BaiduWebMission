@@ -42,27 +42,64 @@ body {
     border: 70px solid #ddd;
     border-image: url(border.jpg) 70 repeat;
 }
-
-.transparent
+.transparent {
+    width: 200px;
+    height: 100px;
+    background-color: rgba(2, 123, 2, 0.3);
+    margin: 30px;
+}
+.gradient {
+    width: 400px;
+    height: 100px;
+    margin: 30px;
+    background-image: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
+}
+.text {
+    width: 200px;
+    height: 100px;
+    color: #fff;
+    background-color: #231;
+    margin: 30px;
+    word-wrap: normal;
+    overflow: hidden;
+}
+@font-face {
+    font-family: "MOOC Font";
+    src: url("http://www.imooc.com/Amaranth-BoldItalic.otf");
+}
+.font
 {
+  background-color: #fff;
   width: 200px;
   height: 100px;
-  background-color: rgba(2,123,2,0.3);
   margin: 30px;
+  color: #000;
+  text-align: center;
+  line-height: 100px;
+  font-family: "MOOC Font";
+  text-shadow: 4px 2px 3px red;
 }
-.gradient
+.background
 {
-  width: 400px;
+  width: 300px;
   height: 100px;
+  background-color: #fff;
   margin: 30px;
-  background-image:linear-gradient(to left, red, orange,yellow,green,blue,indigo,violet);
+  border: 20px dashed #aaa;
+  background:#ccc url(http://static.mukewang.com/static/img/logo_index.png) no-repeat;
+  background-origin: content-box;
+  background-clip:padding-box;
+  background-size: cover;
 }
-.text
+.multiple-background
 {
-  width: 200px;
-  height: 100px;
-  color: #fff;
-  background-color: #231;
-  margin: 30px;
-  overflow: hidden;
+  background-image: url(http://img.imooc.com/54cf2365000140e600740095.jpg),
+                      url(http://img.imooc.com/54cf238a0001728d00740095.jpg),
+                      url(http://img.imooc.com/54cf23b60001fd9700740096.jpg);
+    background-position: left top, 100px 0, 200px 0;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    width: 300px;
+    height: 100px;
+    margin: 30px;
+    background-color: #fff;
 }
