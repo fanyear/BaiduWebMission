@@ -1,7 +1,6 @@
 body {
     padding: 0px;
     margin: 0px;
-    background-color: #000;
 }
 .round div {
     background-color: #439;
@@ -52,7 +51,7 @@ body {
     width: 400px;
     height: 100px;
     margin: 30px;
-    background-image: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
+    background-image: linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, violet);
 }
 .text {
     width: 200px;
@@ -102,4 +101,58 @@ body {
     height: 100px;
     margin: 30px;
     background-color: #fff;
+}
+.choose
+{
+  color: #fff;
+  margin: 30px;
+}
+.choose p[sx^=mia]
+{
+  color: red;
+}
+.choose p[sx$=mia]
+{
+  color: blue;
+}
+.choose p[sx*=f]
+{
+  color: tomato;
+}
+:root
+{
+  background-color: #666;
+}
+body>div
+{
+  margin: 30px;
+}
+.not p:not([alt="2"])
+{
+  color: red;
+}
+.empty p
+{
+  width: 100px;
+  height: 50px;
+  background-color: red;
+}
+.empty p:empty
+{
+  display: none;
+}
+.target p
+{
+  display: none;
+}
+#one:target
+{
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  font-size: 40px;
+  background-color: blue;
+  display: block;
 }
