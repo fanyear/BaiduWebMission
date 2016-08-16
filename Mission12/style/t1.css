@@ -1,0 +1,36 @@
+body
+{
+  padding: 0px;
+  margin: 0px;
+  font-weight: bolder;
+  background-color: #23e;
+}
+.nav
+{
+  list-style: none;
+  margin: 100px auto;
+  background-color: tomato;
+  width: 600px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 10px 3px #d00;
+}
+.nav li
+{
+  display: inline-block;
+  padding: 15px 15px;
+  background:linear-gradient(to bottom,#dd2926,#a82724,#dd2926) no-repeat right / 1px 15px;
+}
+.nav a
+{
+  text-decoration: none;
+  color: #fff;
+  transition: transform .3s ease .1s;
+}
+.nav a:hover
+{
+  transform: translateY(-8px);
+}
+.nav li:last-child
+{
+  background: none;
+}
