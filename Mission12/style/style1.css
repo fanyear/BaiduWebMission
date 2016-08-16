@@ -156,3 +156,10 @@ body>div
   background-color: blue;
   display: block;
 }
+.transition
+{
+  width: 100px;
+  height: 100px;
+  margin: 100px auto;
+  background-color: tomato;
+}
