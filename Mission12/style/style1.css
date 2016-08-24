@@ -66,35 +66,30 @@ body {
     font-family: "MOOC Font";
     src: url("http://www.imooc.com/Amaranth-BoldItalic.otf");
 }
-.font
-{
-  background-color: #fff;
-  width: 200px;
-  height: 100px;
-  margin: 30px;
-  color: #000;
-  text-align: center;
-  line-height: 100px;
-  font-family: "MOOC Font";
-  text-shadow: 4px 2px 3px red;
+.font {
+    background-color: #fff;
+    width: 200px;
+    height: 100px;
+    margin: 30px;
+    color: #000;
+    text-align: center;
+    line-height: 100px;
+    font-family: "MOOC Font";
+    text-shadow: 4px 2px 3px red;
 }
-.background
-{
-  width: 300px;
-  height: 100px;
-  background-color: #fff;
-  margin: 30px;
-  border: 20px dashed #aaa;
-  background:#ccc url(http://static.mukewang.com/static/img/logo_index.png) no-repeat;
-  background-origin: content-box;
-  background-clip:padding-box;
-  background-size: cover;
+.background {
+    width: 300px;
+    height: 100px;
+    background-color: #fff;
+    margin: 30px;
+    border: 20px dashed #aaa;
+    background: #ccc url(http://static.mukewang.com/static/img/logo_index.png) no-repeat;
+    background-origin: content-box;
+    background-clip: padding-box;
+    background-size: cover;
 }
-.multiple-background
-{
-  background-image: url(http://img.imooc.com/54cf2365000140e600740095.jpg),
-                      url(http://img.imooc.com/54cf238a0001728d00740095.jpg),
-                      url(http://img.imooc.com/54cf23b60001fd9700740096.jpg);
+.multiple-background {
+    background-image: url(http://img.imooc.com/54cf2365000140e600740095.jpg), url(http://img.imooc.com/54cf238a0001728d00740095.jpg), url(http://img.imooc.com/54cf23b60001fd9700740096.jpg);
     background-position: left top, 100px 0, 200px 0;
     background-repeat: no-repeat, no-repeat, no-repeat;
     width: 300px;
@@ -102,96 +97,77 @@ body {
     margin: 30px;
     background-color: #fff;
 }
-.choose
-{
-  color: #fff;
-  margin: 30px;
+.choose {
+    color: #fff;
+    margin: 30px;
 }
-.choose p[sx^=mia]
-{
-  color: red;
+.choose p[sx^=mia] {
+    color: red;
 }
-.choose p[sx$=mia]
-{
-  color: blue;
+.choose p[sx$=mia] {
+    color: blue;
 }
-.choose p[sx*=f]
-{
-  color: tomato;
+.choose p[sx*=f] {
+    color: tomato;
 }
-:root
-{
-  background-color: #666;
+:root {
+    background-color: #666;
 }
-body>div
-{
-  margin: 30px;
+body>div {
+    margin: 30px;
 }
-.not p:not([alt="2"])
-{
-  color: red;
+.not p:not([alt="2"]) {
+    color: red;
 }
-.empty p
-{
-  width: 100px;
-  height: 50px;
-  background-color: red;
+.empty p {
+    width: 100px;
+    height: 50px;
+    background-color: red;
 }
-.empty p:empty
-{
-  display: none;
+.empty p:empty {
+    display: none;
 }
-.target p
-{
-  display: none;
+.target p {
+    display: none;
 }
-#one:target
-{
-  width: 200px;
-  height: 100px;
-  text-align: center;
-  line-height: 100px;
-  color: #fff;
-  font-size: 40px;
-  background-color: blue;
-  display: block;
+#one:target {
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+    font-size: 40px;
+    background-color: blue;
+    display: block;
 }
-.transition
-{
-  width: 100px;
-  height: 100px;
-  margin: 100px auto;
-  background-color: #aaa;
-  transition: -webkit-transform 1s ease .1s,border-radius 1s ease .1s,background-color 1s ease .1s;
-
+.transition {
+    width: 100px;
+    height: 100px;
+    margin: 100px auto;
+    background-color: #aaa;
+    transition: -webkit-transform 1s ease .1s, border-radius 1s ease .1s, background-color 1s ease .1s;
 }
-.transition:hover
-{
-  -webkit-transform: rotate(3600deg);
-  border-radius: 50px;
-  background-color: tomato;
+.transition:hover {
+    -webkit-transform: rotate(3600deg);
+    border-radius: 50px;
+    background-color: tomato;
 }
-
 @keyframes test {
-  0%
-  {
-    border-radius: 0px;
-    margin-left: 0px;
-  }
-  100%
-  {
-    border-radius: 100px;
-    margin-left: 600px;
-  }
+    0% {
+        border-radius: 0px;
+        margin-left: 0px;
+    }
+    100% {
+        border-radius: 100px;
+        margin-left: 600px;
+    }
 }
-
-.keyframes
-{
-  width: 200px;
-  height: 200px;
-  background-color: tomato;
-  animation: test 2s ease .1s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-fill-mode:  forwards;
+.keyframes {
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+    animation: test 2s ease .1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
