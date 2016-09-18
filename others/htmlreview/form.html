@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>form</title>
+</head>
+
+<body>
+    <form class="" action="index.html" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            First name:
+            <br/>
+            <input type="text" name="firstName" value="">
+            <br/>
+            <input type="radio" name="sex" value="male">Male
+            <input type="radio" name="sex" value="female">Female
+            <br/>
+            <input type="submit" name="submit" value="SUBMIT">
+            <!--name property is necessary-->
+
+            <select class="nav" name="nav">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+
+            <br/>
+
+            <textarea name="introdution" rows="8" cols="60">
+
+            </textarea>
+            <br/>
+
+            <button type="button" name="button">click me</button>
+            <br/>
+
+            <input list="browsers" />
+            <datalist id="browsers">
+                <option value="Internet"></option>
+                <option value="Firefox"></option>
+                <option value="Chrome"></option>
+            </datalist>
+            <br/>
+            <br/>password :
+            <input type="password" name="psw" value="">
+
+            <br/>
+
+            <input type="checkbox" name="place" value="Nanning">Nanning
+            <input type="checkbox" name="place" value="Beijing">Beijing
+            <input type="checkbox" name="place" value="Foshan">Foshan
+            <input type="checkbox" name="place" value="Guangdong">Guangdong
+
+            <br>
+
+            <input type="number" name="number" step="3" value="10" max="20" min="1" step="20">
+            <input type="date" name="date">
+            <br>
+            <input type="color" name="name" value="">
+            <br>
+            <input type="range" name="range" value="">
+            <br>
+            <input type="month" name="name" value="">
+            <br>
+            <input type="week" name="name" value="">
+            <br>
+            <input type="time" name="name" value="">
+            <br>
+            <input type="datetime" name="name" value="">
+            <br>
+            <input type="datetime-local" name="name" value="">
+            <br>
+            <input type="email" name="name" value="">
+            <br>
+            <input type="search" name="name" value="">
+            <br>
+            <input type="tel" name="name" value="">
+            <br>
+            <input type="url" name="name" value="">
+            <p> HTML5 为 input 增加了如下属性：
+                <br> autocomplete autofocus form formaction formenctype formmethod formnovalidate formtarget height 和 width list min 和 max multiple pattern (regexp) placeholder required step
+                <br>并为 form 增加如需属性： autocomplete novalidate
+            </p>
+        </fieldset>
+
+    </form>
+
+
+
+</body>
+
+</html>

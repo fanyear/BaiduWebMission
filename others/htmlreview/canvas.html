@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>canvas and svg</title>
+</head>
+
+<body>
+    <canvas id="mycanvas" width="300" height="300"></canvas>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+        <polygon points="100,10 40,180 190,60 10,60 160,180" style="fill:red;stroke:blue;stroke-width:3;fill-rule:evenodd;" />
+    </svg>
+
+<p>
+  <h3>SVG</h3>
+SVG 是一种使用 XML 描述 2D 图形的语言。
+SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。您可以为某个元素附加 JavaScript 事件处理器。
+在 SVG 中，每个被绘制的图形均被视为对象。如果 SVG 对象的属性发生变化，那么浏览器能够自动重现图形。
+</p>
+<hr>
+<p>
+  <h3>Canvas</h3>
+Canvas 通过 JavaScript 来绘制 2D 图形。
+Canvas 是逐像素进行渲染的。
+在 canvas 中，一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。
+</p>
+<hr>
+
+<p>
+<h3>Canvas 与 SVG 的比较</h3>
+下表列出了 canvas 与 SVG 之间的一些不同之处。<br><br>
+Canvas <br><br>
+依赖分辨率 <br>
+不支持事件处理器 <br>
+弱的文本渲染能力 <br>
+能够以 .png 或 .jpg 格式保存结果图像 <br>
+最适合图像密集型的游戏，其中的许多对象会被频繁重绘 <br><br>
+SVG <br><br>
+不依赖分辨率 <br>
+支持事件处理器 <br>
+最适合带有大型渲染区域的应用程序（比如谷歌地图） <br>
+复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快） <br>
+不适合游戏应用 <br>
+</p>
+    <script type="text/javascript">
+        var c = document.getElementById("mycanvas");
+        var cxt = c.getContext("2d");
+        cxt.fillStyle = "#aaa";
+        cxt.fillRect(0, 0, 150, 75);
+
+
+
+
+        var c = document.getElementById("mycanvas");
+        var cxt = c.getContext("2d");
+        var grd = cxt.createLinearGradient(0, 0, 175, 50);
+        grd.addColorStop(0, "#FF0000");
+        grd.addColorStop(1, "#00FF00");
+        cxt.fillStyle = grd;
+        cxt.fillRect(0, 0, 175, 50);
+
+        var c = document.getElementById("mycanvas");
+        var cxt = c.getContext("2d");
+        cxt.fillStyle = "#FF0000";
+        cxt.beginPath();
+        cxt.arc(70, 18, 15, 0, Math.PI * 2, true);
+        cxt.closePath();
+        cxt.fill();
+    </script>
+</body>
+
+</html>

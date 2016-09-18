@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Midia</title>
+</head>
+
+<body>
+    <!--
+<embed height="100" width="100" src="music1.mp3"></embed>
+<br>
+<object height="100" width="100" data="music1.mp3"></object>
+-->
+
+    <audio controls="controls">
+        <source src="/i/song.ogg" type="audio/ogg">
+        <source src="music1.mp3" type="audio/mpeg">
+    </audio>
+    <br>
+    <audio controls="controls">
+        <source src="/i/song.ogg" type="audio/ogg">
+        <source src="music1.mp3" type="audio/mpeg">
+        <embed height="100" width="100" src="music1.mp3" />
+    </audio>
+    <br>
+    <br>
+    <a href="music1.mp3">Play Sound</a>
+
+
+    <video width="320" height="240" controls="controls">
+        <source src="movie.mp4" type="video/mp4" />
+        <source src="movie.ogg" type="video/ogg" />
+        <source src="movie.webm" type="video/webm" />
+        <object data="movie.mp4" width="320" height="240">
+            <embed src="movie.swf" width="320" height="240" />
+        </object>
+    </video>
+
+    <embed src="http://player.youku.com/player.php/sid/XMzI2NTc4NTMy/v.swf" width="480" height="400" type="application/x-shockwave-flash">
+    </embed>
+
+    <script type="text/javascript" src="http://mediaplayer.yahoo.com/js">
+    </script>
+    <script>
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br />Longitude: " + position.coords.longitude;
+        }
+    </script>
+</body>
+
+</html>
