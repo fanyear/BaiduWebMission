@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style/style1.css" media="screen" title="no title">
+    <title>Mission17</title>
+</head>
+
+<body>
+    <header>
+        <h1>十个城市空气质量统计</h1>
+    </header>
+    <aside class="leftAside">
+        <form class="form" action="index.html" method="post">
+
+            <label for="citySelect">城市</label>
+            <select class="citySelect" id="citySelect" name="citySelect">
+                <option value="Beijing">北京</option>
+                <option value="Nanning">南宁</option>
+                <option value="Foshan">佛山</option>
+                <option value="Guangzhou">广州</option>
+                <option value="Tianjin">天津</option>
+                <option value="Lijiang">丽江</option>
+            </select>
+
+            <label for="timeSelect">时间粒度</label>
+            <select class="timeSelect" id="timeSelect" name="timeSelect">
+                <option value="60">日</option>
+                <option value="14">星期</option>
+                <option value="2">月份</option>
+            </select>
+            <br>
+        </form>
+    </aside>
+
+    <article>
+        <div class="diagram" id="diagram">
+            <span id="point">
+
+            </span>
+
+        </div>
+    </article>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
