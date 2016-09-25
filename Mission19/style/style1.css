@@ -1,0 +1,43 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background: #aaa;
+    font-size: 20px;
+}
+main {
+    display: block;
+    margin: 100px auto;
+    width: 800px;
+    text-align: center;
+}
+button {
+    width: 84px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.showData span {
+    vertical-align: bottom;
+    width: 10px;
+    margin-top: 25px;
+    margin-left: 5px;
+    background: tomato;
+    display: inline-block;
+    cursor: pointer;
+    transition: all .3s ease-in-out .1s;
+    -webkit-transition: all .3s ease-in-out .1s;
+}
+.showData span:hover {
+    background: #abc;
+}
+.h-100 {
+    width: 2px;
+    height: 200px;
+    background: #aaa;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-top: 25px;
+    padding: 0px;
+}
+.showData {
+    vertical-align: bottom; 
+}
