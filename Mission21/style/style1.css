@@ -1,0 +1,57 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background: #aaa;
+}
+
+main{
+  display: block;
+  width: 1000px;
+  margin: 200px auto;
+  text-align: center;
+}
+.section{
+  width: 900px;
+  height: 80px;
+  padding: 30px;
+}
+input{
+  border: 3px solid #666;
+}
+input:focus{
+  border: 3px solid #acd;
+  outline: #acd;
+  box-shadow: 0px 0px 26px 3px #acd;
+}
+.text{
+    padding: 30px;
+    width: 900px;
+}
+main div{
+  display: inline-block;
+}
+.content{
+  display: block;
+  margin-top: 30px;
+}
+.tag .content span{
+    background: #acd;
+}
+.content span{
+  padding: 2px;
+  margin: 5px;
+  color: #fff;
+  font-size: 30px;
+  transition: all .5s ease .1s;
+  -webkit-transition: all .5s ease .1s;
+}
+.content span:hover{
+  background: red;
+}
+.div-content{
+  display: block;
+  margin-top: 30px;
+}
+.div-content span{
+  background: tomato;
+}
