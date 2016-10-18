@@ -1,0 +1,51 @@
+body{
+  background: #aaa;
+}
+.boot{
+  width: 800px;
+  height: 500px;
+  border: 4px #cdf solid;
+  position: relative;
+  font-size: 0;
+  text-align: center;
+}
+span{
+  width: 1px;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+div{
+  box-sizing: border-box;
+  width: 40%;
+  height: 70%;
+  border:4px #aaa solid;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+  position: relative;
+}
+a{
+  display: block;
+  position: absolute;
+  top:0px;
+  font-size: 25px;
+  color:#fff;
+  font-weight: 600;
+  width: 100%;
+}
+
+.btn{
+  width: 800px;
+  height: 100px;
+  text-align: center;
+}
+button{
+  margin: 50px;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  background: tomato;
+  color: #fff;  
+
+}
