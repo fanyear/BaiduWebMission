@@ -28,6 +28,13 @@ function traverse() {
         for (var i = 0; i < node.children.length; i++) {
             traverseChildren(node.children[i]);
         }
+        node.span.getElementsByTagName("dot")[0].style.background = "#666";
+        node.beSelected=true;
+
+          for (var i = 0; i < node.children.length; i++) {
+              node.children[i].span.style.display = "block";
+          }
+
         list.push(node);
     }
 
@@ -39,11 +46,13 @@ function traverse() {
             return;
         }
         if(index){
-        list[index-1].span.getElementsByTagName("a")[0].style.color = "#fff";
+          list[index-1].span.getElementsByTagName("a")[0].style.color = "#fff";
         }
         if(index < list.length){
-            list[index].span.getElementsByTagName("a")[0].style.color = "tomato";
+          list[index].span.getElementsByTagName("a")[0].style.color = "tomato";
         }
+
+
 
         index++;
     }
@@ -74,15 +83,11 @@ function search(data) {
     }
     searchChildren(this.root);
 
-
-
-
-
     function show() {
         if (data == nodeList[index].data) {
 
-                nodeList[index].span.getElementsByTagName("a")[0].style.color = "tomato";
-                  nodeList[index-1].span.getElementsByTagName("a")[0].style.color = "#fff";
+              nodeList[index].span.getElementsByTagName("a")[0].style.color = "tomato";
+              nodeList[index-1].span.getElementsByTagName("a")[0].style.color = "#fff";
 
             clearInterval(tree.interval);
             return;
@@ -104,17 +109,6 @@ function search(data) {
         index++;
     }
     tree.interval = setInterval(show, 500)
-}
-
-
-if (Node.beSelected) {
-  if (Node.span.getElementsByTagName("dot")[0]){
-Node.span.getElementsByTagName("dot")[0].style.background = "#666";
-  }
-
-    for (var i = 0; i < Node.children.length; i++) {
-        Node.children[i].span.style.display = "block";
-    }
 }
 
 function addNode(data, toData) {
@@ -169,6 +163,7 @@ function select() {
         var tree = arguments[1];
         Node.span.getElementsByTagName("a")[0].onclick = function() {
             Node.beSelected = !Node.beSelected;
+
             if(tree.selectedNode == null){
             tree.selectedNode  = Node;
             Node.span.getElementsByTagName("a")[0].style.color="tomato";
