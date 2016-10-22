@@ -6,57 +6,83 @@ body {
     height: 150px;
     font-size: 0;
 }
-span {
-    font-weight: bolder;
+a {
+    font-size: 20px;
+    cursor: pointer;
+}
+.btnFrame{
+  display: inline-block;
+  vertical-align: top;
+  width: 600px;
+}
+.btn {
+    display: inline-block;;
+    width: 400px;
+    margin: 50px 0px 0px 270px;
+    font-size: 0;
+}
+button {
+    cursor: pointer;
     display: inline-block;
-    border: 2px #000 solid;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 12px;
-    vertical-align:middle;
-    margin: 2px;
+    width: 80px;
+    height: 30px;
+    border: 0;
+    color: #333;
+    font-size: 20px;
+    font-weight: bolder;
+    vertical-align: top;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+input {
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    vertical-align: top;
+    border: 0;
+    font-size: 15px;
+    padding: 0;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: 0;
+}
+.traverse, .del {
+    margin-right: 100px;
+    border-radius: 5px;
+}
+.treeSection {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    padding: 20px;
+    background: #666  ;
+}
+.treeSection span {
+    display: block;
+    margin-left: 30px;
+    background: #666;
+}
+.treeSection span dot {
+    display: inline-block;
+    border: 3px solid #ADFF2F;
+    background:  #ADFF2F;
+    width: 10px;
+    height: 10px;
+    margin: 0px 5px;
+    vertical-align: middle;
+    border-radius: 15px;
+    margin-left: 15px;
+}
+.treeSection span a {
+    vertical-align: middle;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    padding-right: 50px;
+    display: inline-block;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bolder;
 
-}
-a{
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.btn{
-  display: block;
-  width: 800px;
-  margin: 50px 0px 0px 270px;
-  font-size: 0;
-}
-
-button{
-  cursor: pointer;
-  display: inline-block;
-  width: 80px;
-  height: 30px;
-  border: 0;
-  color:#333;
-  font-size: 20px;
-  font-weight: bolder;
-  vertical-align: top;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-input{
-  display: inline-block;
-  width: 80px;
-  height: 30px;
-  vertical-align: top;
-  border: 0;
-  font-size: 25px;
-  padding: 0;
-  text-align: center;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  outline: 0;
-
-}
-.traverse,.del{
-  margin-right: 100px;
-  border-radius: 5px;
 }
