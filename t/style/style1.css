@@ -3,13 +3,16 @@ body{
   text-align: center;
 }
 .bg{
-  display: block;
   width: 100%;
   height: 800px;
-  position: relative;
-
   background: url("bg.jpg") no-repeat;
-    background-position: center center;;
+  background-position: center center;;
+}
+.bg1{
+  width: 100%;
+  height: 1000px;
+  background: url("bg1.jpg") no-repeat;
+  background-position: center center;;
 }
 span{
   font-size: 25px;
@@ -22,6 +25,6 @@ span{
   border-top: 3px #fff solid;
   border-bottom: 3px #fff solid;
   width: 900px;
-  margin-top: 500px;
+  margin-top: 400px;
 
 }
