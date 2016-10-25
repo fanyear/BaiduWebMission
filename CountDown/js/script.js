@@ -1,10 +1,11 @@
 var WINDOW_WIDTH = 1400;
 var WINDOW_HEIGHT = 700;
 var RADIUS = 8;
-var MARGIN_LEFT = 100;
-var MARGIN_TOP = 200;
-
-var endTime = new Date(2016, 11, 18, 1, 20, 40);
+var MARGIN_LEFT = 150;
+var MARGIN_TOP = 300;
+var MARGIN_TOP_LEFT = 150;
+var MARGIN_TOP_TOP = 50;
+var endTime = new Date(2016, 2, 11, 0, 0, 0);
 var showTimeSecond = 0;
 
 var balls = [];
@@ -37,7 +38,7 @@ window.onload = function() {
 
 function getShowTimeSecond() {
     var currentTime = new Date();
-    var ret = endTime.getTime() - currentTime.getTime();
+    var ret =  currentTime.getTime()-endTime.getTime();
     ret = Math.round(ret / 1000);
 
     return ret >= 0 ? ret : 0;
@@ -46,15 +47,26 @@ function getShowTimeSecond() {
 function update() {
     var nextShowTimeSecond = getShowTimeSecond();
 
-    var nextHour = parseInt(nextShowTimeSecond / 3600);
-    var nextMinute = parseInt((nextShowTimeSecond - nextHour * 3600) / 60);
+    var nextDay = parseInt(nextShowTimeSecond/3600/24);
+    var nextHour = parseInt((nextShowTimeSecond -nextDay*3600*24) / 3600);
+    var nextMinute = parseInt((nextShowTimeSecond -nextDay*3600*24- nextHour * 3600) / 60);
     var nextSecond = nextShowTimeSecond % 60;
 
-    var curHour = parseInt(showTimeSecond / 3600);
-    var curMinute = parseInt((showTimeSecond - curHour * 3600) / 60);
+    var curDay = parseInt(showTimeSecond/3600/24);
+    var curHour = parseInt( (showTimeSecond-curDay*3600*24)/ 3600);
+    var curMinute = parseInt((showTimeSecond -curDay*3600*24- curHour * 3600) / 60);
     var curSecond = showTimeSecond % 60;
 
     if (nextSecond != curSecond) {
+      if (parseInt(nextDay / 100) != parseInt(curDay / 100)) {
+          addBalls(MARGIN_TOP_LEFT, MARGIN_TOP, parseInt(curDay / 100));
+      }
+      if (parseInt(nextDay / 10%10) != parseInt(curDay / 10%10)) {
+          addBalls(MARGIN_TOP_LEFT, MARGIN_TOP, parseInt(curDay / 10%10));
+      }
+      if (parseInt(nextDay / 10) != parseInt(curDay / 10)) {
+          addBalls(MARGIN_TOP_LEFT, MARGIN_TOP, parseInt(curDay / 10));
+      }
         if (parseInt(nextHour / 10) != parseInt(curHour / 10)) {
             addBalls(MARGIN_LEFT, MARGIN_TOP, parseInt(curHour / 10));
         }
@@ -120,10 +132,20 @@ function render(ctx) {
 
     ctx.clearRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
 
-    var hour = parseInt(showTimeSecond / 3600);
-    var minute = parseInt((showTimeSecond - hour * 3600) / 60);
+
+    var day = parseInt(showTimeSecond/3600/24);
+    var hour = parseInt( (showTimeSecond-day*3600*24)/ 3600);
+    var minute = parseInt((showTimeSecond -day*3600*24- hour * 3600) / 60);
     var second = showTimeSecond % 60;
 
+
+    renderDigit(MARGIN_TOP_LEFT, MARGIN_TOP_TOP, parseInt(parseInt(day / 100)), ctx);
+    renderDigit(MARGIN_TOP_LEFT + 9 * 2 * (RADIUS + 1), MARGIN_TOP_TOP, parseInt(parseInt(day /10%10)), ctx);
+    renderDigit(MARGIN_TOP_LEFT + 18 * 2 * (RADIUS + 1), MARGIN_TOP_TOP, parseInt(parseInt(day % 10)), ctx);
+      renderDigit(MARGIN_TOP_LEFT + 29 * 2 * (RADIUS + 1), MARGIN_TOP_TOP, parseInt(parseInt(11)), ctx,"#FF6666");
+        renderDigit(MARGIN_TOP_LEFT + 37 * 2 * (RADIUS + 1), MARGIN_TOP_TOP, parseInt(parseInt(12)), ctx,"#FF6666");
+          renderDigit(MARGIN_TOP_LEFT + 45 * 2 * (RADIUS + 1), MARGIN_TOP_TOP, parseInt(parseInt(13)), ctx,"#FF6666");
+            renderDigit(MARGIN_TOP_LEFT + 53 * 2 * (RADIUS + 1), MARGIN_TOP_TOP, parseInt(parseInt(14)), ctx,"#FF6666");
 
     renderDigit(MARGIN_LEFT, MARGIN_TOP, parseInt(hour / 10 % 10), ctx);
     renderDigit(MARGIN_LEFT + 9 * 2 * (RADIUS + 1), MARGIN_TOP, parseInt(hour % 10), ctx);
@@ -148,7 +170,12 @@ function render(ctx) {
 
 function renderDigit(x, y, time, ctx) {
 
-    ctx.fillStyle = "#1874CD";
+    if(arguments[4]){
+        ctx.fillStyle = arguments[4];
+    }else{
+        ctx.fillStyle = "#1874CD";
+    }
+
 
     for (var i = 0; i < digit[time].length; i++) {
         for (var j = 0; j < digit[time][i].length; j++) {
