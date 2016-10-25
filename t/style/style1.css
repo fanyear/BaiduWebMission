@@ -3,19 +3,21 @@ body{
   text-align: center;
 }
 .bg{
+  font-size: 25px;
   width: 100%;
   height: 800px;
   background: url("bg.jpg") no-repeat;
   background-position: center center;;
 }
 .bg1{
+  font-size: 30px;
   width: 100%;
   height: 1000px;
   background: url("bg1.jpg") no-repeat;
   background-position: center center;;
 }
 span{
-  font-size: 25px;
+
   line-height: 40px;
   font-weight: bolder;
   color: #fff;
