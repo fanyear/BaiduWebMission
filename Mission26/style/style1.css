@@ -1,0 +1,14 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background: #888;
+}
+canvas{
+  display: block;
+  margin: 50px auto; 
+}
+.control{
+  display: block;
+  margin: 50px auto;
+    border: #555 solid 2px;
+}
