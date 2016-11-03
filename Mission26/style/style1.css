@@ -1,14 +1,44 @@
-body{
-  margin: 0px;
-  padding: 0px;
-  background: #888;
+body {
+    margin: 0px;
+    padding: 0px;
+    background: #888;
+    position: relative;
 }
-canvas{
-  display: block;
-  margin: 50px auto; 
+canvas {
+    display: block;
+    margin: 50px auto;
 }
-.control{
-  display: block;
-  margin: 50px auto;
-    border: #555 solid 2px;
+.control {
+    display: block;
+    width: 380px;
+    height: 200px;
+    border: #555 solid 4px;
+    background: #555;
+    position: absolute;
+    bottom:100px;
+    left: 70px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px 10px;
+    box-sizing:border-box;;
+}
+
+.control span{
+  font-weight: bolder;
+  color: #ccc;
+  float: left;
+  line-height: 15px;
+  display: inline-block;
+  margin: 15px 0px 0px 15px;
+}
+button{
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 5px 10px;
+  height: 25px;
+  font-size: 15px;
+  line-height:15px;
+  font-weight: bolder;
+  background: #aaa;
+  border-radius: 8px;
 }
