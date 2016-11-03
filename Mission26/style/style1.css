@@ -2,7 +2,8 @@ body {
     margin: 0px;
     padding: 0px;
     background: #888;
-    position: relative;
+    position: relative; 
+    min-width: 1500px;
 }
 canvas {
     display: block;
