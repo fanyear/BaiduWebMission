@@ -1,0 +1,62 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background: #888;
+    position: relative;
+    min-width: 1500px;
+}
+canvas {
+    display: block;
+    margin: 50px auto;
+}
+.section {
+    isplay: block;
+    width: 380px;
+    height: 200px;
+    border: #555 solid 4px;
+    background: #555;
+    position: absolute;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+.control {
+    bottom: 100px;
+    left: 70px;
+}
+.select {
+    bottom: 350px;
+    left: 70px;
+    color: #ccc;
+    line-height: 15px;
+}
+.select span{
+  display: inline-block;
+  width: 110px;
+  font-weight: bolder;
+
+}
+.select div{
+  display: block;
+  margin: 30px 0px;
+}
+.control span {
+    font-weight: bolder;
+    color: #ccc;
+    float: left;
+    line-height: 15px;
+    display: inline-block;
+    margin: 15px 0px 0px 15px;
+}
+button {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 5px 10px;
+    height: 25px;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: bolder;
+    background: #aaa;
+    border-radius: 8px;
+}
