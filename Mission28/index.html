@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style/style1.css" media="screen" title="no title">
-    <title>Mission27</title>
+    <title>Mission28</title>
 </head>
 
 <body>
@@ -12,20 +12,32 @@
   <div class="select section">
     <div class="powerSys" id="powerSys">
       <span>Power System :</span>
-      <input type="radio" name="power" value="1">前进号
-      <input type="radio" name="power" value="2">奔腾号
-      <input type="radio" name="power" value="3">超越号
+      <input type="radio" name="power" value="1">Low
+      <input type="radio" name="power" value="2">Normal
+      <input type="radio" name="power" value="3">High
     </div>
     <div class="sourceSys" id="sourceSys">
       <span>Source System :</span>
-      <input type="radio" name="source" value="1">劲量型
-      <input type="radio" name="source" value="2">光能型
-      <input type="radio" name="source" value="3">永久型
+      <input type="radio" name="source" value="1">Low
+      <input type="radio" name="source" value="2">Normal
+      <input type="radio" name="source" value="3">Fast
     </div>
     <button id="addBtn" type="button" name="button">Create an Airship</button>
   </div>
   <div class="control section" id="control" >
 
+  </div>
+  <div class="table section" >
+      <table id="table">
+        <tr>
+        <th>Airship </th>
+        <th>PowerSys</th>
+        <th>SourceSys</th>
+        <th>Status</th>
+        <th>energy</th>
+        </tr>
+
+      </table>
   </div>
     <script src="js/script.js"></script>
 </body>
