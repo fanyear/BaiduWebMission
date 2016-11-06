@@ -1,0 +1,69 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  background: #fff;
+  position: relative;
+}
+body,html{
+  height: 100%;
+}
+.table{
+  display: block;
+  width: 500px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -25px;
+  line-height: 50px;
+}
+.name{
+  position: relative;
+}
+tip{
+  display: inline-block;
+  position: absolute;
+  color: #999;
+  font-weight: 700;
+  font-size: 20px;
+  height: 30px;
+  line-height: 30px;
+  top:60px;
+  left: 95px;
+}
+.name span{
+  padding: 0px 10px;
+  font-weight: 900;
+  font-size: 25px;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+.name input{
+  width: 300px;
+  border-radius: 5px;
+  outline: none;
+  height: 50px;
+  vertical-align: middle;
+  border:  2px #bbb solid;
+  margin: 0px 20px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding-left: 25px;
+  font-size: 25px;
+  font-weight:400;
+}
+.name button{
+    box-sizing: border-box;;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 5px;
+  background: 	#0078B4;
+  vertical-align: middle;
+  height: 50px;
+  padding: 0px 20px;
+  outline: none;
+  border: none;
+  display: inline-block;
+}
