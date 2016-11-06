@@ -6,6 +6,7 @@ body{
   text-align: center;
   font-size: 25px;
   font-weight: 800;
+  min-width: 1200px;
 }
 body,html{
   height: 100%;
