@@ -9,12 +9,12 @@ body,html{
 }
 .table{
   display: block;
-  width: 500px;
+  width: 550px;
   height: 50px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: -250px;
+  margin-left: -275px;
   margin-top: -25px;
   line-height: 50px;
 }
