@@ -1,0 +1,62 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  background: #fff;
+  position: relative;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 800;
+  min-width: 1200px;
+}
+body,html{
+  height: 100%;
+}
+
+.table{
+  display: inline-block;
+  margin-top: 200px;
+}
+
+.selectSection input{
+  width: 20px;
+  height: 20px;
+}
+
+.selectSection  div{
+  display: inline-block;
+  margin: 20px 100px;
+}
+
+.select{
+  margin-top: 50px;
+}
+.select span{
+  display: inline-block;
+  width: 20%;
+  vertical-align: middle;
+}
+.schoolSelect select{
+  display: inline-block;
+  width: 30%;
+  vertical-align: middle;
+  margin-right: 50px;
+  height: 35px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  font-size: 20px;
+  padding-left: 10px;
+  outline: none;
+}
+.workSelect{
+  display: none;
+}
+.workSelect input{
+  display:inline-block;
+  width: 70%;
+  height: 35px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  font-size: 20px;
+  padding-left: 10px;
+  vertical-align: middle;
+}

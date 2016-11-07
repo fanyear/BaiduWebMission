@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style/style1.css" media="screen" title="no title">
+    <title>Mission31</title>
+</head>
+
+<body>
+
+    <div class="table">
+        <form class="form" id="form"action="index.html" method="post">
+            <div class="selectSection">
+              <div >
+                <input id="student"type="radio" name="select" value="" checked="checked">在校生
+              </div>
+              <div >
+                <input id="noStudent"type="radio" name="select" value="">非在校生
+              </div>
+            </div>
+            <div class="schoolSelect select" id="school">
+              <span>学校</span>
+              <select class="city" name="selectCity" id="city">
+                <option value="1">北京</option>
+                <option value="2">上海</option>
+                <option value="3">广州</option>
+              </select>
+
+              <select class="school" name="school" id="schoolsSelect">
+                <option value="1">清华大学</option>
+                <option value="2">北京大学</option>
+                <option value="3">中国人民大学</option>
+              </select>
+            </div>
+            <div class="workSelect select" id="workUnit">
+              <span>就业单位</span>
+                <input type="text" name="workUnit" value="">
+            </div>
+
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
