@@ -1,0 +1,14 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background: #aaa;
+}
+canvas{ 
+  display: block;
+  margin: 50px auto;
+}
+.command{
+  display: block;
+  margin: 50px auto;
+  width: 400px;
+}
