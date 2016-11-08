@@ -15,6 +15,12 @@ var target = {
 };
 
 var cmds = [];
+var moveInterval = null;
+var nextStep = false;
+var startStep = false;
+var update = false;
+var updateInterval = null;
+var speed = 20
 
 canvas.width = CANVASWIDTH;
 canvas.height = CANVASHEIGHT;
@@ -35,53 +41,305 @@ function move() {
     cmd = cmd.toLowerCase()
     switch (cmd) {
         case "go":
-            moveForward();
+            moveForward()
             break;
         case "tun lef":
-            turn(3)
+            cmds.push(-90)
             break;
         case "tun rig":
-            turn(1)
+            cmds.push(90)
             break;
         case "tun bac":
-            turn(2)
+            cmds.push(180)
+            break;
+        case "tra lef":
+            moveXY(3)
+            break;
+        case "tra top":
+            moveXY(0)
+            break;
+        case "tra rig":
+            moveXY(1)
+            break;
+        case "tra bot":
+            moveXY(2)
+            break;
+        case "mov lef":
+            moveWholeTarget(3)
+            break;
+        case "mov rig":
+            moveWholeTarget(1)
+            break;
+        case "mov top":
+            moveWholeTarget(0)
+            break;
+        case "mov bot":
+            moveWholeTarget(2)
             break;
 
         default:
 
     }
-    drawBackground()
-    drawTarget()
+    if (cmds.length) {
+        update = true
+        clearInterval(updateInterval)
+        updateInterval = setInterval(targeUpdate, speed)
+
+    } else {
+        update = false;
+    }
+
 }
 
-function turn(n){
-  target.direction = Math.abs(target.direction + n)%4;
+
+function targeUpdate() {
+    var step = 0;
+    if (cmds.length == 0) {
+        clearInterval(updateInterval)
+    }
+    if (startStep == false || nextStep == true) {
+        startStep = true;
+        nextStep = false;
+
+        step = cmds.shift();
+        console.log(step);
+        if (typeof step == "object") {
+            moveTarget(step.ax, step.ay)
+        }
+
+        if (typeof step == "number") {
+            rotateTarget(step)
+        }
+    }
 }
-function moveForward() {
-    switch (target.direction) {
+
+function moveWholeTarget(n) {
+    var angel = 0;
+    var degree = 0;
+    var x = target.x;
+    var y = target.y;
+    if (target.direction < 0) {
+        angel = (target.direction % 360 + 360) / 90;
+    } else {
+        angel = (target.direction % 360) / 90;
+    }
+    if (angel == 4) {
+        angel = 0
+    }
+    if (n != angel) {
+        degree = (n - angel) * 90;
+        if(degree == -270){
+          degree = 90;
+        }
+        if(degree == 270){
+          degree = -90;
+        }
+        cmds.push(degree);
+        switch (n) {
+            case 0:
+                if (target.y > 1) {
+                    y = target.y - 1;
+                }
+
+                break;
+            case 1:
+                if (target.x < 10) {
+                    x = target.x + 1;
+                }
+                break;
+            case 2:
+                if (target.y < 10) {
+                    y = target.y + 1;
+                }
+                break;
+            case 3:
+                if (target.x > 1) {
+                    x = target.x - 1;
+                }
+                break;
+            default:
+
+        }
+        if (x != target.x || y != target.y) {
+            cmds.push({
+                ax: x,
+                ay: y
+            })
+        }
+    } else {
+      switch (n) {
+          case 0:
+              if (target.y > 1) {
+                  y = target.y - 1;
+              }
+
+              break;
+          case 1:
+              if (target.x < 10) {
+                  x = target.x + 1;
+              }
+              break;
+          case 2:
+              if (target.y < 10) {
+                  y = target.y + 1;
+              }
+              break;
+          case 3:
+              if (target.x > 1) {
+                  x = target.x - 1;
+              }
+              break;
+          default:
+
+      }
+      if (x != target.x || y != target.y) {
+          cmds.push({
+              ax: x,
+              ay: y
+          })
+      }
+    }
+}
+
+function moveXY(n) {
+    var angel = n;
+    var x = target.x;
+    var y = target.y;
+
+    console.log(angel);
+    switch (angel) {
         case 0:
-            if(target.y>1){
-              target.y--;
+            if (target.y > 1) {
+                y = target.y - 1;
             }
+
             break;
         case 1:
-            if(target.x <10){
-              target.x++
+            if (target.x < 10) {
+                x = target.x + 1;
             }
             break;
         case 2:
-            if(target.y<10){
-              target.y++;
+            if (target.y < 10) {
+                y = target.y + 1;
             }
             break;
         case 3:
-            if(target.x>1){
-              target.x--;
+            if (target.x > 1) {
+                x = target.x - 1;
             }
             break;
         default:
 
     }
+    if (x != target.x || y != target.y) {
+        cmds.push({
+            ax: x,
+            ay: y
+        })
+    }
+}
+
+function moveForward() {
+    var angel = 0;
+    var x = target.x;
+    var y = target.y;
+    if (target.direction < 0) {
+        angel = (target.direction % 360 + 360) / 90;
+    } else {
+        angel = (target.direction % 360) / 90;
+    }
+    if (angel == 4) {
+        angel = 0
+    }
+    console.log(angel);
+    switch (angel) {
+        case 0:
+            if (target.y > 1) {
+                y = target.y - 1;
+            }
+
+            break;
+        case 1:
+            if (target.x < 10) {
+                x = target.x + 1;
+            }
+            break;
+        case 2:
+            if (target.y < 10) {
+                y = target.y + 1;
+            }
+            break;
+        case 3:
+            if (target.x > 1) {
+                x = target.x - 1;
+            }
+            break;
+        default:
+
+    }
+    if (x != target.x || y != target.y) {
+        cmds.push({
+            ax: x,
+            ay: y
+        })
+    }
+}
+
+
+function rotateTarget(n) {
+    var num = Math.abs(n / 9);
+    var deg = Math.abs(n) / n * 9;
+    var time = 0;
+    clearInterval(moveInterval);
+    moveInterval = setInterval(function() {
+        target.direction += deg;
+        time++;
+        console.log(time);
+        drawBackground()
+        drawTarget()
+        if (time == num) {
+            nextStep = true;
+            clearInterval(moveInterval);
+        }
+
+    }, speed)
+}
+
+function moveTarget(x, y) {
+    var dx = 0,
+        dy = 0;
+
+    if (Math.abs(x - target.x) > 0.11) {
+        target.x > x ? dx = -0.1 : dx = 0.1;
+    }
+    if (Math.abs(y - target.y) > 0.11) {
+        target.y > y ? dy = -0.1 : dy = 0.1;
+    }
+
+    clearInterval(moveInterval);
+    moveInterval = setInterval(function() {
+        if (Math.abs(x - target.x) < 0.1 && Math.abs(y - target.y) < 0.1) {
+            nextStep = true;
+
+            target.x = Math.round(target.x)
+            target.y = Math.round(target.y)
+            clearInterval(moveInterval);
+        } else {
+            if (Math.abs(x - target.x) > 0.1) {
+                target.x += dx;
+            }
+            if (Math.abs(y - target.y) > 0.1) {
+                target.y += dy;
+            }
+
+            console.log(target.x, target.y);
+        }
+
+        drawBackground()
+        drawTarget()
+    }, speed)
+
 }
 
 function drawTarget() {
@@ -94,13 +352,13 @@ function drawTarget() {
     context.save();
     context.fillStyle = "red";
     context.strokeStyle = "red"
-    context.rotate(target.direction * 90 / 360 * 2 * Math.PI)
+    context.rotate(target.direction / 360 * 2 * Math.PI)
     context.fillRect(-25, -25, 50, 50)
     context.restore();
 
     context.save()
     context.fillStyle = "blue";
-    context.rotate(target.direction * 90 / 360 * 2 * Math.PI)
+    context.rotate(target.direction / 360 * 2 * Math.PI)
     context.fillRect(-25, -25, 50, 15)
     context.restore();
 
@@ -110,7 +368,7 @@ function drawTarget() {
 
 function drawBackground() {
 
-    context.clearRect(0,0,CANVASWIDTH,CANVASHEIGHT)
+    context.clearRect(0, 0, CANVASWIDTH, CANVASHEIGHT)
     context.save()
     context.beginPath()
     context.translate(40, 40)
