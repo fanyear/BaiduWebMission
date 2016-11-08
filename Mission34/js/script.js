@@ -14,6 +14,8 @@ var target = {
     realDirection: 0
 };
 
+var cmds = [];
+
 canvas.width = CANVASWIDTH;
 canvas.height = CANVASHEIGHT;
 
