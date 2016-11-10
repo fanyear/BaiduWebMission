@@ -10,8 +10,8 @@ var lines = document.getElementById("lines")
 var refreshBbtn = document.getElementById("refreshBbtn")
 
 var target = {
-    x: 5,
-    y: 6,
+    x: 1,
+    y: 1,
     direction: 0,
     realDirection: 0
 };
@@ -22,7 +22,7 @@ var nextStep = false;
 var startStep = false;
 var update = false;
 var updateInterval = null;
-var speed = 15
+var speed = 25
 var commands = [];
 var listNum = 0;
 var inputCheckLines = null;
@@ -239,6 +239,44 @@ console.log("moving");
     }
 }
 
+function moveByAngle(n,num,x,y) {
+  switch (n) {
+      case 0:
+          if (target.y > num) {
+              y = target.y - num;
+          }
+
+          break;
+      case 1:
+          if (target.x <= 10 -num) {
+              x = target.x  +num;
+          }
+          break;
+      case 2:
+          if (target.y <= 10 - num) {
+              y = target.y  + num;
+          }
+          break;
+      case 3:
+          if (target.x > num) {
+              x = target.x - num;
+          }
+          break;
+      default:
+
+  }
+  if (x != target.x || y != target.y) {
+      console.log("n"+n+"y: "+ y + " target.y :" + target.y);
+      cmds.push({
+          ax: x,
+          ay: y
+      })
+  } else {
+      error = true;
+      console.log("y: "+ y + " target.y :" + target.y);
+      console.log("error");
+  }
+}
 function moveWholeTarget(n,num) {
     var angel = 0;
     var degree = 0;
@@ -261,79 +299,9 @@ function moveWholeTarget(n,num) {
             degree = -90;
         }
         cmds.push(degree);
-        switch (n) {
-            case 0:
-                if (target.y > num) {
-                    y = target.y - num;
-                }
-
-                break;
-            case 1:
-                if (target.x < 10 -num) {
-                    x = target.x  +num;
-                }
-                break;
-            case 2:
-                if (target.y < 10 - num) {
-                    y = target.y  + num;
-                }
-                break;
-            case 3:
-                if (target.x > num) {
-                    x = target.x - num;
-                }
-                break;
-            default:
-
-        }
-        if (x != target.x || y != target.y) {
-            console.log("n"+n+"y: "+ y + " target.y :" + target.y);
-            cmds.push({
-                ax: x,
-                ay: y
-            })
-        } else {
-            error = true;
-            console.log("y: "+ y + " target.y :" + target.y);
-            console.log("error");
-        }
+      moveByAngle(n,num,x,y)
     } else {
-        switch (n) {
-          case 0:
-              if (target.y > num) {
-                  y = target.y - num;
-              }
-
-              break;
-          case 1:
-              if (target.x < 10 -num) {
-                  x = target.x  +num;
-              }
-              break;
-          case 2:
-              if (target.y < 10 - num) {
-                  y = target.y  + num;
-              }
-              break;
-          case 3:
-              if (target.x > num) {
-                  x = target.x - num;
-              }
-              break;
-          default:
-
-        }
-        if (x != target.x || y != target.y) {
-            console.log("n"+n+"y: "+ y + " target.y :" + target.y);
-            cmds.push({
-                ax: x,
-                ay: y
-            })
-        } else {
-            error = true;
-            console.log("y: "+ y + " target.y :" + target.y);
-            console.log("error");
-        }
+      moveByAngle(n,num,x,y)
     }
 }
 
@@ -343,42 +311,7 @@ function moveXY(n,num) {
     var y = target.y;
 
     console.log(angel);
-    switch (angel) {
-        case 0:
-            if (target.y > num) {
-                y = target.y - num;
-            }
-
-            break;
-        case 1:
-            if (target.x < 10 -num) {
-                x = target.x  +num;
-            }
-            break;
-        case 2:
-            if (target.y < 10 - num) {
-                y = target.y  + num;
-            }
-            break;
-        case 3:
-            if (target.x > num) {
-                x = target.x - num;
-            }
-            break;
-        default:
-
-    }
-    if (x != target.x || y != target.y) {
-        console.log("n"+n+"y: "+ y + " target.y :" + target.y);
-        cmds.push({
-            ax: x,
-            ay: y
-        })
-    } else {
-        error = true;
-        console.log("y: "+ y + " target.y :" + target.y);
-        console.log("error");
-    }
+    moveByAngle(angel,num,x,y)
 }
 
 function moveForward(n) {
@@ -393,42 +326,7 @@ function moveForward(n) {
     if (angel == 4) {
         angel = 0
     }
-    switch (angel) {
-        case 0:
-            if (target.y > n) {
-                y = target.y - n;
-            }
-
-            break;
-        case 1:
-            if (target.x < 10 -n) {
-                x = target.x  +n;
-            }
-            break;
-        case 2:
-            if (target.y < 10 - n) {
-                y = target.y  + n;
-            }
-            break;
-        case 3:
-            if (target.x > n) {
-                x = target.x - n;
-            }
-            break;
-        default:
-
-    }
-    if (x != target.x || y != target.y) {
-        console.log("n"+n+"y: "+ y + " target.y :" + target.y);
-        cmds.push({
-            ax: x,
-            ay: y
-        })
-    } else {
-        error = true;
-        console.log("y: "+ y + " target.y :" + target.y);
-        console.log("error");
-    }
+    moveByAngle(angel,n,x,y)
 }
 
 
@@ -482,10 +380,10 @@ function moveTarget(x, y) {
             clearInterval(moveInterval);
         } else {
             if (Math.abs(x - target.x) > 0.001) {
-                target.x += (x - target.x)/12;
+                target.x += (x - target.x)/15 + (x - target.x)/Math.abs(x - target.x) * 0.01;
             }
             if (Math.abs(y - target.y) > 0.001) {
-                target.y += (y - target.y)/12 ;
+                target.y += (y - target.y)/15 +(y - target.y)/Math.abs(y - target.y) * 0.01;
             }
 
         }
