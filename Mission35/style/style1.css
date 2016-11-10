@@ -40,7 +40,7 @@ canvas{
   padding: 0px;
   text-align: center;
 }
-.lines span{
+.lines span{ 
   display: block;
   font-size: 20px;
   font-weight: 800;

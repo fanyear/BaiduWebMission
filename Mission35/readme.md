@@ -1,7 +1,7 @@
 #### 链接：[https://fanyear.github.io/BaiduWebMission/Mission35/index.html](https://fanyear.github.io/BaiduWebMission/Mission35/index.html)
 
 #### Tips
-- GO 3：向当前方向前进三格 
+- GO 3：向当前方向前进三格
 - TUN LEF：向左转（逆时针旋转90度）
 - TUN RIG：向右转（顺时针旋转90度）
 - TUN BAC：向右转（旋转180度）
@@ -14,3 +14,28 @@
 - MOV RIG 4：方向转向屏幕右侧，向屏幕的右侧移动四格
 - MOV BOT 5：方向转向屏幕下面，向屏幕的下面移动五格
 - 大小写均可
+
+go
+mov lef
+go
+go
+go
+mov bot
+go
+go
+go
+go
+mov top
+go
+go
+go
+run lef
+go
+go
+go
+go
+tun bac
+go
+go
+go
+go

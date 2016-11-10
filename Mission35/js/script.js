@@ -10,8 +10,8 @@ var lines = document.getElementById("lines")
 var refreshBbtn = document.getElementById("refreshBbtn")
 
 var target = {
-    x: parseInt(Math.ceil(Math.random() * 10)),
-    y: parseInt(Math.ceil(Math.random() * 10)),
+    x: 5,
+    y: 6,
     direction: 0,
     realDirection: 0
 };
@@ -22,11 +22,13 @@ var nextStep = false;
 var startStep = false;
 var update = false;
 var updateInterval = null;
-var speed = 20
+var speed = 15
 var commands = [];
 var listNum = 0;
 var inputCheckLines = null;
 var error = false;
+var run = 0;
+var double = 0;
 
 canvas.width = CANVASWIDTH;
 canvas.height = CANVASHEIGHT;
@@ -36,9 +38,19 @@ window.onload = function() {
     drawBackground()
     drawTarget()
     btn.addEventListener("click", move);
-    refreshBbtn.addEventListener("click",function(){
-      input.value = "";
-      error = false;
+    refreshBbtn.addEventListener("click", function() {
+        input.value = "";
+        error = false;
+        target.x = parseInt(Math.ceil(Math.random() * 10));
+        target.y = parseInt(Math.ceil(Math.random() * 10));
+        target.direction = 0;
+        target.realDirection = 0;
+        run = 0;
+        while (lines.getElementsByTagName("span").length) {
+            lines.removeChild(lines.getElementsByTagName("span")[0])
+        }
+        drawBackground()
+        drawTarget()
     })
 }
 
@@ -62,7 +74,7 @@ input.onfocus = function(e) {
         } else if (ls.length > commands.length) {
             lines.removeChild(ls[ls.length - 1])
         }
-    }, 20)
+    }, 2)
 }
 input.onblur = function() {
     clearInterval(inputCheckLines)
@@ -87,12 +99,18 @@ String.prototype.trim = function() {　　
 
 function move() {
     error = false;
+    run = 0;
     commands = input.value.split(/\n/);
     for (var i = 0; i < commands.length; i++) {
         commands[i] = commands[i].trim()
         commands[i] = commands[i].toLowerCase()
     }
+    console.log("step 0 :" + 0);
+    console.log("command :" + commands);
     addCmd(commands.shift())
+    if(error){
+      linesShow(run+1 , 2)
+    }
 
     if (cmds.length) {
         update = true
@@ -105,10 +123,35 @@ function move() {
 
 }
 
+function linesShow(n, flag) {
+    var span = lines.getElementsByTagName("span")
+
+    if (span.length >= n && flag == 1) {
+        if (n - 2 > -1) {
+            span[n - 2].style.background = "#1D1F21"
+        }
+        span[n - 1].style.background = "#373B41"
+
+    }
+    if (flag == 2) {
+      if(span[n-1]){
+        span[n - 1].style.background = "red"
+      }
+
+    }
+}
+
 function addCmd(cmd) {
+    var num = 0;
+  if(cmd.match(/\d/)){
+      num = parseInt(cmd[cmd.length-1]);
+      cmd = cmd.slice(0,cmd.length-2);
+      console.log("num :"+ num + "cmd :"+cmd +"!");
+  }
+
     switch (cmd) {
         case "go":
-            moveForward()
+            moveForward(num)
             break;
         case "tun lef":
             cmds.push(-90)
@@ -120,28 +163,32 @@ function addCmd(cmd) {
             cmds.push(180)
             break;
         case "tra lef":
-            moveXY(3)
+            moveXY(3,num)
             break;
         case "tra top":
-            moveXY(0)
+            moveXY(0,num)
             break;
         case "tra rig":
-            moveXY(1)
+            moveXY(1,num)
             break;
         case "tra bot":
-            moveXY(2)
+            moveXY(2,num)
             break;
         case "mov lef":
-            moveWholeTarget(3)
+            moveWholeTarget(3,num)
+            double = 1;
             break;
         case "mov rig":
-            moveWholeTarget(1)
+            moveWholeTarget(1,num)
+              double = 1;
             break;
         case "mov top":
-            moveWholeTarget(0)
+            moveWholeTarget(0,num)
+              double = 1;
             break;
         case "mov bot":
-            moveWholeTarget(2)
+            moveWholeTarget(2,num)
+              double = 1;
             break;
 
         default:
@@ -154,32 +201,45 @@ function addCmd(cmd) {
 function targeUpdate() {
     var step = 0;
     if (commands.length == 0 && cmds.length == 0 || error) {
-      if(error){
-        console.log("error");
-      }else{
-        console.log("done");
-      }
-       clearInterval(updateInterval)
+        if (error) {
+
+            linesShow(run+1 , 2)
+                  } else {
+
+        }
+        clearInterval(updateInterval);
+        return true;
     }
     if (startStep == false || nextStep == true) {
         startStep = true;
         nextStep = false;
 
+        if(double != 2){
+          run++;
+        }
+        if(double == 1){
+          double++;
+        }else if (double == 2) {
+          double = 0;
+        }
 
-
+        linesShow(run, 1)
         step = cmds.shift();
-        console.log(step);
+console.log("moving");
+
         if (typeof step == "object") {
             moveTarget(step.ax, step.ay)
+        }else if(typeof step == "number"){
+          rotateTarget(step)
+        }else{
+          console.log("typeof error")
         }
 
-        if (typeof step == "number") {
-            rotateTarget(step)
-        }
+
     }
 }
 
-function moveWholeTarget(n) {
+function moveWholeTarget(n,num) {
     var angel = 0;
     var degree = 0;
     var x = target.x;
@@ -203,77 +263,81 @@ function moveWholeTarget(n) {
         cmds.push(degree);
         switch (n) {
             case 0:
-                if (target.y > 1) {
-                    y = target.y - 1;
+                if (target.y > num) {
+                    y = target.y - num;
                 }
 
                 break;
             case 1:
-                if (target.x < 10) {
-                    x = target.x + 1;
+                if (target.x < 10 -num) {
+                    x = target.x  +num;
                 }
                 break;
             case 2:
-                if (target.y < 10) {
-                    y = target.y + 1;
+                if (target.y < 10 - num) {
+                    y = target.y  + num;
                 }
                 break;
             case 3:
-                if (target.x > 1) {
-                    x = target.x - 1;
+                if (target.x > num) {
+                    x = target.x - num;
                 }
                 break;
             default:
 
         }
         if (x != target.x || y != target.y) {
+            console.log("n"+n+"y: "+ y + " target.y :" + target.y);
             cmds.push({
                 ax: x,
                 ay: y
             })
-        }else{
-          error = true;
-          console.log("error");
+        } else {
+            error = true;
+            console.log("y: "+ y + " target.y :" + target.y);
+            console.log("error");
         }
     } else {
         switch (n) {
-            case 0:
-                if (target.y > 1) {
-                    y = target.y - 1;
-                }
+          case 0:
+              if (target.y > num) {
+                  y = target.y - num;
+              }
 
-                break;
-            case 1:
-                if (target.x < 10) {
-                    x = target.x + 1;
-                }
-                break;
-            case 2:
-                if (target.y < 10) {
-                    y = target.y + 1;
-                }
-                break;
-            case 3:
-                if (target.x > 1) {
-                    x = target.x - 1;
-                }
-                break;
-            default:
+              break;
+          case 1:
+              if (target.x < 10 -num) {
+                  x = target.x  +num;
+              }
+              break;
+          case 2:
+              if (target.y < 10 - num) {
+                  y = target.y  + num;
+              }
+              break;
+          case 3:
+              if (target.x > num) {
+                  x = target.x - num;
+              }
+              break;
+          default:
 
         }
         if (x != target.x || y != target.y) {
+            console.log("n"+n+"y: "+ y + " target.y :" + target.y);
             cmds.push({
                 ax: x,
                 ay: y
             })
-        }else{
-          error = true;
-          console.log("error");
+        } else {
+            error = true;
+            console.log("y: "+ y + " target.y :" + target.y);
+            console.log("error");
         }
     }
 }
 
-function moveXY(n) {
+function moveXY(n,num) {
     var angel = n;
     var x = target.x;
     var y = target.y;
@@ -281,41 +345,43 @@ function moveXY(n) {
     console.log(angel);
     switch (angel) {
         case 0:
-            if (target.y > 1) {
-                y = target.y - 1;
+            if (target.y > num) {
+                y = target.y - num;
             }
 
             break;
         case 1:
-            if (target.x < 10) {
-                x = target.x + 1;
+            if (target.x < 10 -num) {
+                x = target.x  +num;
             }
             break;
         case 2:
-            if (target.y < 10) {
-                y = target.y + 1;
+            if (target.y < 10 - num) {
+                y = target.y  + num;
             }
             break;
         case 3:
-            if (target.x > 1) {
-                x = target.x - 1;
+            if (target.x > num) {
+                x = target.x - num;
             }
             break;
         default:
 
     }
     if (x != target.x || y != target.y) {
+        console.log("n"+n+"y: "+ y + " target.y :" + target.y);
         cmds.push({
             ax: x,
             ay: y
         })
-    }else{
-      error = true;
-      console.log("error");
+    } else {
+        error = true;
+        console.log("y: "+ y + " target.y :" + target.y);
+        console.log("error");
     }
 }
 
-function moveForward() {
+function moveForward(n) {
     var angel = 0;
     var x = target.x;
     var y = target.y;
@@ -329,37 +395,39 @@ function moveForward() {
     }
     switch (angel) {
         case 0:
-            if (target.y > 1) {
-                y = target.y - 1;
+            if (target.y > n) {
+                y = target.y - n;
             }
 
             break;
         case 1:
-            if (target.x < 10) {
-                x = target.x + 1;
+            if (target.x < 10 -n) {
+                x = target.x  +n;
             }
             break;
         case 2:
-            if (target.y < 10) {
-                y = target.y + 1;
+            if (target.y < 10 - n) {
+                y = target.y  + n;
             }
             break;
         case 3:
-            if (target.x > 1) {
-                x = target.x - 1;
+            if (target.x > n) {
+                x = target.x - n;
             }
             break;
         default:
 
     }
     if (x != target.x || y != target.y) {
+        console.log("n"+n+"y: "+ y + " target.y :" + target.y);
         cmds.push({
             ax: x,
             ay: y
         })
-    }else{
-      error = true;
-      console.log("error");
+    } else {
+        error = true;
+        console.log("y: "+ y + " target.y :" + target.y);
+        console.log("error");
     }
 }
 
@@ -377,9 +445,10 @@ function rotateTarget(n) {
         if (time == num) {
             nextStep = true;
             clearInterval(moveInterval);
-            console.log(cmds.length);
-            if(commands.length && cmds.length == 0){
-              addCmd(commands.shift())
+            console.log("step :" + run );
+            console.log("command "+run+":" + commands[0]);
+            if (commands.length && cmds.length == 0) {
+                addCmd(commands.shift())
             }
 
         }
@@ -400,22 +469,23 @@ function moveTarget(x, y) {
 
     clearInterval(moveInterval);
     moveInterval = setInterval(function() {
-        if (Math.abs(x - target.x) < 0.1 && Math.abs(y - target.y) < 0.1) {
+        if (Math.abs(x - target.x) < 0.01 && Math.abs(y - target.y) < 0.01) {
             nextStep = true;
 
             target.x = Math.round(target.x)
             target.y = Math.round(target.y)
-            console.log(cmds.length);
-            if(commands.length && cmds.length == 0){
-              addCmd(commands.shift())
+            console.log("step :" + run);
+              console.log("command "+run+":" + commands[0]);
+            if (commands.length && cmds.length == 0) {
+                addCmd(commands.shift())
             }
             clearInterval(moveInterval);
         } else {
-            if (Math.abs(x - target.x) > 0.1) {
-                target.x += dx;
+            if (Math.abs(x - target.x) > 0.001) {
+                target.x += (x - target.x)/12;
             }
-            if (Math.abs(y - target.y) > 0.1) {
-                target.y += dy;
+            if (Math.abs(y - target.y) > 0.001) {
+                target.y += (y - target.y)/12 ;
             }
 
         }
