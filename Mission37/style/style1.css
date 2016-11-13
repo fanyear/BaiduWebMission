@@ -1,0 +1,85 @@
+html,body{
+  padding: 0px;
+  margin: 0px;
+  font-size: 0px;
+  height: 100%;
+}
+.logIn{
+  display: block;
+  margin: 100px auto;
+}
+.logIn button{
+  display: block;
+  margin: 0px auto;
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  outline: none;
+}
+.emersionLayer{
+  position: fixed;
+  left: 0px;
+  top:0px;
+  width:100%;
+  height: 100%;
+  background: #000;
+  opacity:0.0;
+  filter:(opactity=0);
+  display: none;
+}
+.emersionFrame{
+  display: block;
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 600px;
+  height: 250px;
+  margin-left: -300px;
+  margin-top: -125px;
+  background: #666;
+  opacity:0;
+  filter:alpha(opactity:0);
+}
+.emersionFrame span,p,button{
+  font-size: 25px;
+}
+.emersionFrame span{
+  cursor:move;
+  display: block;
+  height: 50px;
+  background: #999;
+  color: #000;
+  text-align: center;
+  line-height: 50px;
+}
+.emersionFrame p{
+  padding: 20px;
+  color: #000;
+  font-weight: 800;
+}
+.emersionFrame button{
+  background:#aaa;
+  outline: none;
+  position: absolute;
+}
+.resize{
+  width: 0px;
+  height: 0px;
+  border-top:10px transparent solid ;
+  border-right:10px #999 solid;
+  border-bottom: 10px #999 solid;
+  border-left: 10px transparent solid;
+  position: absolute;
+  right:  0px;
+  bottom: 0px;
+  cursor:cell;;
+}
+#confirm{
+  bottom: 10px;
+  right: 100px;
+}
+#cancel{
+  bottom: 10px;
+  right: 20px;
+}
