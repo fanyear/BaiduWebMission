@@ -14,4 +14,18 @@
 - MOV RIG 4：方向转向屏幕右侧，向屏幕的右侧移动四格
 - MOV BOT 5：方向转向屏幕下面，向屏幕的下面移动五格
 - 大小写均可
- 
+
+栗子：
+- tun rig
+- go 3
+- mov bot 3
+- go 5
+- mov lef 2
+- mov rig 3
+- tra lef 3
+- tun rig
+- mov top 5
+- mov bot 3
+- tun bac
+- mov rig 3
+- tra top 3
