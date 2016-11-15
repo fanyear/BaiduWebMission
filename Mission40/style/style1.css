@@ -1,0 +1,76 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background: #fff;
+    font-size: 0px;
+    text-align: center;
+}
+.calendar {
+    display: inline-block;
+    margin-top: 100px;
+    border: #888 2px solid;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px #888;
+    padding: 20px;
+}
+.selectDate {
+    display: block;
+    height: 40px;
+    width: 280px;
+}
+.selectDate select {
+    vertical-align: middle;
+    display: inline-block;
+    height: 30px;
+    width: 70px;
+    margin: 5px 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.left, .right {
+    display: inline-block;
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+.showDate{
+  display: block;
+  width: 280px;
+  text-align: left;
+}
+.days span,.date span{
+  display: inline-block;
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 10px;
+  text-align:center;
+  border-radius: 5px;
+}
+.days span{
+  font-weight: bold;
+}
+.date span{
+  font-weight: normal;
+}
+.thisMonth{
+  color: #000;
+}
+.thisMonth:hover{
+  background: #347EBF;
+}
+.notThisMonth{
+  color: #aaa;
+}
