@@ -17,7 +17,6 @@ body, html {
     border-radius: 10px;
     padding-bottom: 10px;
     padding: 10px 10px 0px 10px;
-    border: 2px blue solid;
 }
 .gallery-box {
     width: 100%;
@@ -25,14 +24,12 @@ body, html {
     /*js改*/
     box-sizing: border-box;
     position: relative;
-    border: 2px green solid;
 }
 .frame {
     display: inline-block;
     width: 100%;
     height: 100%;
     padding: 5px;
-    border: 2px red solid;
 }
 figure {
     display: inline-block;
@@ -83,7 +80,6 @@ figcaption p {
 .gallery-2 .frame:first-of-type {
   position: absolute;
   left: 0px;
-  border: 12px red solid;
 }
 .gallery-2 .frame:first-of-type figure {
     width: 100%;
@@ -96,7 +92,6 @@ figcaption p {
 
   position: absolute;
   right: 0px;
-  border: 10px blue solid;
 }
 .gallery-2 .frame:last-of-type figure{
     width: 100%;
@@ -254,7 +249,7 @@ figcaption p {
   right:   0px;
   top:  33%;
   width: 33.33%;
-  height: 66%;
+  height: 33%;
 }
 .gallery-6 .frame:nth-child(3) figure {
     background-image: url(../img/3.jpg);
@@ -271,7 +266,7 @@ figcaption p {
 }
 .gallery-6 .frame:nth-child(5){
   position: absolute;
-  left:   0px;
+  left:   33%;
   bottom:  0px;
   width: 33.33%;
   height: 33%;
@@ -284,7 +279,7 @@ figcaption p {
   right:   0px;
   bottom:  0px;
   width: 33.33%;
-  height: 44%;
+  height: 33%;
 }
 .gallery-6 .frame:nth-child(6) figure {
     background-image: url(../img/6.jpg);
