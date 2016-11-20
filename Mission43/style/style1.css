@@ -1,0 +1,291 @@
+body, html {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    background: #aaa;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.gallery {
+    width: 80%;
+    background: #fff;
+    margin: 100px auto;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    padding: 10px 10px 0px 10px;
+    border: 2px blue solid;
+}
+.gallery-box {
+    width: 100%;
+    height: 800px;
+    /*js改*/
+    box-sizing: border-box;
+    position: relative;
+    border: 2px green solid;
+}
+.frame {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border: 2px red solid;
+}
+figure {
+    display: inline-block;
+    margin: 0px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+figure:hover .figcaption {
+    bottom: 0px;
+}
+.figcaption {
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    bottom: -200px;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+span{
+    background-color: #888;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+}
+figcaption {
+    padding: 10px;
+    color: #fff;
+}
+figcaption p {
+    text-indent: 2em;
+    font-size: 16px;
+}
+.gallery-1 figure {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/2.jpg);
+}
+.gallery-2 .frame:first-of-type {
+  position: absolute;
+  left: 0px;
+  border: 12px red solid;
+}
+.gallery-2 .frame:first-of-type figure {
+    width: 100%;
+    height: 100%;
+    -webkit-clip-path: polygon(0 100%, 0 0, 59% 0, 39% 100%);
+    clip-path: polygon(0 100%, 0 0, 59% 0, 39% 100%);
+    background-image: url(../img/2.jpg);
+}
+.gallery-2 .frame:last-of-type {
+
+  position: absolute;
+  right: 0px;
+  border: 10px blue solid;
+}
+.gallery-2 .frame:last-of-type figure{
+    width: 100%;
+    height: 100%;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 41% 100%, 61% 0);
+    clip-path: polygon(100% 0, 100% 100%, 41% 100%, 61% 0);
+    background-image: url(../img/6.jpg);
+}
+
+
+.gallery-3  .frame:nth-child(1){
+  width: 50%;
+  height: 100%;
+}
+.gallery-3 .frame:nth-child(1) figure{
+    background-image: url(../img/1.jpg);
+}
+.gallery-3  .frame:nth-child(2){
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  right: 0px;
+}
+.gallery-3 .frame:nth-child(2) figure{
+    background-image: url(../img/2.jpg);
+}
+.gallery-3 .frame:nth-child(3){
+  position: absolute;
+  right: 0px;
+  top:50%;
+  width: 50%;
+  height: 50%;
+}
+.gallery-3 .frame:nth-child(3) figure {
+    background-image: url(../img/4.jpg);
+}
+
+
+.gallery-4 .frame:nth-child(1){
+  position: absolute;
+  left: 0px;
+  top:0;
+  width: 50%;
+  height: 50%;
+}
+.gallery-4 .frame:nth-child(1) figure {
+    background-image: url(../img/1.jpg);
+}
+
+.gallery-4 .frame:nth-child(2){
+  position: absolute;
+  right:  0px;
+  top:0;
+  width: 50%;
+  height: 50%;
+}
+.gallery-4 .frame:nth-child(2) figure {
+    background-image: url(../img/2.jpg);
+}
+
+.gallery-4 .frame:nth-child(3){
+  position: absolute;
+  left:  0px;
+  bottom: 0px;
+  width: 50%;
+  height: 50%;
+}
+.gallery-4 .frame:nth-child(3) figure {
+    background-image: url(../img/3.jpg);
+}
+.gallery-4 .frame:nth-child(4){
+  position: absolute;
+  right:  0px;
+  bottom: 0px;
+  width: 50%;
+  height: 50%;
+}
+.gallery-4 .frame:nth-child(4) figure {
+    background-image: url(../img/4.jpg);
+}
+
+.gallery-5 .frame:nth-child(1){
+  position: absolute;
+  left:  0px;
+  top: 0px;
+  width: 66%;
+  height: 66%;
+}
+.gallery-5 .frame:nth-child(1) figure {
+    background-image: url(../img/1.jpg);
+}
+.gallery-5 .frame:nth-child(2){
+  position: absolute;
+  right:  0px;
+  top:  0px;
+  width: 33%;
+  height: 33%;
+}
+.gallery-5 .frame:nth-child(2) figure {
+    background-image: url(../img/2.jpg);
+}
+.gallery-5 .frame:nth-child(3){
+  position: absolute;
+  left:  0px;
+  bottom:  0px;
+  width: 33.33%;
+  height: 33%;
+}
+.gallery-5 .frame:nth-child(3) figure {
+    background-image: url(../img/3.jpg);
+}
+.gallery-5 .frame:nth-child(4){
+  position: absolute;
+  left:  33%;
+  bottom:  0px;
+  width: 33.33%;
+  height: 33%;
+}
+.gallery-5 .frame:nth-child(4) figure {
+    background-image: url(../img/4.jpg);
+}
+.gallery-5 .frame:nth-child(5){
+  position: absolute;
+  right:   0px;
+  bottom:  0px;
+  width: 33.33%;
+  height: 66%;
+}
+.gallery-5 .frame:nth-child(5) figure {
+    background-image: url(../img/5.jpg);
+}
+
+.gallery-6 .frame:nth-child(1){
+  position: absolute;
+  left:   0px;
+  top:  0px;
+  width: 66%;
+  height: 66%;
+}
+.gallery-6 .frame:nth-child(1) figure {
+    background-image: url(../img/1.jpg);
+}
+.gallery-6 .frame:nth-child(2){
+  position: absolute;
+  right:   0px;
+  top:  0px;
+  width: 33.33%;
+  height: 33%;
+}
+.gallery-6 .frame:nth-child(2) figure {
+    background-image: url(../img/2.jpg);
+}
+.gallery-6 .frame:nth-child(3){
+  position: absolute;
+  right:   0px;
+  top:  33%;
+  width: 33.33%;
+  height: 66%;
+}
+.gallery-6 .frame:nth-child(3) figure {
+    background-image: url(../img/3.jpg);
+}
+.gallery-6 .frame:nth-child(4){
+  position: absolute;
+  left:   0px;
+  bottom:  0px;
+  width: 33.33%;
+  height: 33%;
+}
+.gallery-6 .frame:nth-child(4) figure {
+    background-image: url(../img/4.jpg);
+}
+.gallery-6 .frame:nth-child(5){
+  position: absolute;
+  left:   0px;
+  bottom:  0px;
+  width: 33.33%;
+  height: 33%;
+}
+.gallery-6 .frame:nth-child(5) figure {
+    background-image: url(../img/5.jpg);
+}
+.gallery-6 .frame:nth-child(6){
+  position: absolute;
+  right:   0px;
+  bottom:  0px;
+  width: 33.33%;
+  height: 44%;
+}
+.gallery-6 .frame:nth-child(6) figure {
+    background-image: url(../img/6.jpg);
+}
