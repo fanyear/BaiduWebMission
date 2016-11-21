@@ -11,7 +11,7 @@ body, html {
     box-sizing: border-box;
 }
 .gallery {
-    width: 80%;
+    width: 90%;
     background: #fff;
     margin: 100px auto;
     border-radius: 10px;
@@ -49,7 +49,9 @@ figure:hover .figcaption {
 }
 .figcaption {
     width: 100%;
-    height: 15%;
+    height: 20%;
+    min-height: 100px;
+    height: 20%;
     position: absolute;
     bottom: -200px;
     -moz-transition: all 0.3s ease-in;
@@ -65,222 +67,26 @@ span{
     opacity: 0.7;
 }
 figcaption {
-    padding: 10px;
+    padding: 5px;
+    padding-left: 10px;
     color: #fff;
 }
 figcaption p {
-    text-indent: 2em;
-    font-size: 16px;
+    text-indent: 10em;
+    font-size: 18px;
+    padding-left: 30%;
 }
-.gallery-1 figure {
-    width: 100%;
-    height: 100%;
-    background-image: url(../img/2.jpg);
+.gallery-2 .frame:last-of-type .figcaption{
+  text-align: right;
+  padding-right: 70%;
 }
-.gallery-2 .frame:first-of-type {
-  position: absolute;
-  left: 0px;
-}
+
 .gallery-2 .frame:first-of-type figure {
-    width: 100%;
-    height: 100%;
-    -webkit-clip-path: polygon(0 100%, 0 0, 59% 0, 39% 100%);
-    clip-path: polygon(0 100%, 0 0, 59% 0, 39% 100%);
-    background-image: url(../img/2.jpg);
+    -webkit-clip-path: polygon(0 100%, 0 0, 91% 0, 71% 100%);
+    clip-path: polygon(0 100%, 0 0, 91% 0, 71% 100%);
 }
-.gallery-2 .frame:last-of-type {
 
-  position: absolute;
-  right: 0px;
-}
 .gallery-2 .frame:last-of-type figure{
-    width: 100%;
-    height: 100%;
-    -webkit-clip-path: polygon(100% 0, 100% 100%, 41% 100%, 61% 0);
-    clip-path: polygon(100% 0, 100% 100%, 41% 100%, 61% 0);
-    background-image: url(../img/6.jpg);
-}
-
-
-.gallery-3  .frame:nth-child(1){
-  width: 50%;
-  height: 100%;
-}
-.gallery-3 .frame:nth-child(1) figure{
-    background-image: url(../img/1.jpg);
-}
-.gallery-3  .frame:nth-child(2){
-  position: absolute;
-  width: 50%;
-  height: 50%;
-  right: 0px;
-}
-.gallery-3 .frame:nth-child(2) figure{
-    background-image: url(../img/2.jpg);
-}
-.gallery-3 .frame:nth-child(3){
-  position: absolute;
-  right: 0px;
-  top:50%;
-  width: 50%;
-  height: 50%;
-}
-.gallery-3 .frame:nth-child(3) figure {
-    background-image: url(../img/4.jpg);
-}
-
-
-.gallery-4 .frame:nth-child(1){
-  position: absolute;
-  left: 0px;
-  top:0;
-  width: 50%;
-  height: 50%;
-}
-.gallery-4 .frame:nth-child(1) figure {
-    background-image: url(../img/1.jpg);
-}
-
-.gallery-4 .frame:nth-child(2){
-  position: absolute;
-  right:  0px;
-  top:0;
-  width: 50%;
-  height: 50%;
-}
-.gallery-4 .frame:nth-child(2) figure {
-    background-image: url(../img/2.jpg);
-}
-
-.gallery-4 .frame:nth-child(3){
-  position: absolute;
-  left:  0px;
-  bottom: 0px;
-  width: 50%;
-  height: 50%;
-}
-.gallery-4 .frame:nth-child(3) figure {
-    background-image: url(../img/3.jpg);
-}
-.gallery-4 .frame:nth-child(4){
-  position: absolute;
-  right:  0px;
-  bottom: 0px;
-  width: 50%;
-  height: 50%;
-}
-.gallery-4 .frame:nth-child(4) figure {
-    background-image: url(../img/4.jpg);
-}
-
-.gallery-5 .frame:nth-child(1){
-  position: absolute;
-  left:  0px;
-  top: 0px;
-  width: 66%;
-  height: 66%;
-}
-.gallery-5 .frame:nth-child(1) figure {
-    background-image: url(../img/1.jpg);
-}
-.gallery-5 .frame:nth-child(2){
-  position: absolute;
-  right:  0px;
-  top:  0px;
-  width: 33%;
-  height: 33%;
-}
-.gallery-5 .frame:nth-child(2) figure {
-    background-image: url(../img/2.jpg);
-}
-.gallery-5 .frame:nth-child(3){
-  position: absolute;
-  left:  0px;
-  bottom:  0px;
-  width: 33.33%;
-  height: 33%;
-}
-.gallery-5 .frame:nth-child(3) figure {
-    background-image: url(../img/3.jpg);
-}
-.gallery-5 .frame:nth-child(4){
-  position: absolute;
-  left:  33%;
-  bottom:  0px;
-  width: 33.33%;
-  height: 33%;
-}
-.gallery-5 .frame:nth-child(4) figure {
-    background-image: url(../img/4.jpg);
-}
-.gallery-5 .frame:nth-child(5){
-  position: absolute;
-  right:   0px;
-  bottom:  0px;
-  width: 33.33%;
-  height: 66%;
-}
-.gallery-5 .frame:nth-child(5) figure {
-    background-image: url(../img/5.jpg);
-}
-
-.gallery-6 .frame:nth-child(1){
-  position: absolute;
-  left:   0px;
-  top:  0px;
-  width: 66%;
-  height: 66%;
-}
-.gallery-6 .frame:nth-child(1) figure {
-    background-image: url(../img/1.jpg);
-}
-.gallery-6 .frame:nth-child(2){
-  position: absolute;
-  right:   0px;
-  top:  0px;
-  width: 33.33%;
-  height: 33%;
-}
-.gallery-6 .frame:nth-child(2) figure {
-    background-image: url(../img/2.jpg);
-}
-.gallery-6 .frame:nth-child(3){
-  position: absolute;
-  right:   0px;
-  top:  33%;
-  width: 33.33%;
-  height: 33%;
-}
-.gallery-6 .frame:nth-child(3) figure {
-    background-image: url(../img/3.jpg);
-}
-.gallery-6 .frame:nth-child(4){
-  position: absolute;
-  left:   0px;
-  bottom:  0px;
-  width: 33.33%;
-  height: 33%;
-}
-.gallery-6 .frame:nth-child(4) figure {
-    background-image: url(../img/4.jpg);
-}
-.gallery-6 .frame:nth-child(5){
-  position: absolute;
-  left:   33%;
-  bottom:  0px;
-  width: 33.33%;
-  height: 33%;
-}
-.gallery-6 .frame:nth-child(5) figure {
-    background-image: url(../img/5.jpg);
-}
-.gallery-6 .frame:nth-child(6){
-  position: absolute;
-  right:   0px;
-  bottom:  0px;
-  width: 33.33%;
-  height: 33%;
-}
-.gallery-6 .frame:nth-child(6) figure {
-    background-image: url(../img/6.jpg);
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 5% 100%, 25% 0);
+    clip-path: polygon(100% 0, 100% 100%, 5% 100%, 25% 0);
 }
