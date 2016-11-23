@@ -29,7 +29,7 @@ header {
 }
 #main {
     min-height: 400px;
-    margin: 50px 10%;
+    margin: 50px 6%;
     padding: 0px;
     display: -webkit-flex;
     display: flex;
@@ -73,7 +73,7 @@ header {
 }
 #main section a:hover{
     box-shadow: 0px 0px 30px #000;
-    font-size: 1.8em;
+    font-size: 1.6em;
 }
 #main section div {
     margin: 5px 0px;
@@ -117,6 +117,7 @@ footer {
         -webkit-flex: 1 1 40%;
         flex: 1 1 40%;
         margin: 5px;
+        min-width: 1px;
     }
     #main>article, #main>nav, #main>aside {
         /* 恢复到文档内的自然顺序 */
