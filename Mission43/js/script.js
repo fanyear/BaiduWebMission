@@ -26,6 +26,10 @@ var photos = [{
     "description": ""
 }];
 
+function 你大爷的(){
+  alert("你大爷的")
+}
+你大爷的()
 var GalleryWall = function(id, photos) {
     this.ele = document.getElementById(id);
     this.photos = photos;
