@@ -105,22 +105,25 @@ footer {
 /* 窄到已不足以支持三栏 */
 
 @media all and (max-width: 640px) {
+
     #main, #page {
         -webkit-flex-flow: row wrap;
         flex-flow: row wrap;
+        margin: 50px 0px;
     }
     #main section {
         -webkit-flex: 1 1 40%;
         flex: 1 1 40%;
         -webkit-order: 2;
         order: 2;
+        margin: 5px;
     }
     #main>article, #main>nav, #main>aside {
         /* 恢复到文档内的自然顺序 */
         -webkit-order: 0;
         order: 0;
     }
-    #main>nav, #main>aside, header, footer { 
+    #main>nav, #main>aside, header, footer {
         min-height: 50px;
         max-height: 50px;
     }
