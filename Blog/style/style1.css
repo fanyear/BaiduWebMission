@@ -1,4 +1,6 @@
 body, html {
+    margin: 0px;
+    padding: 0px;
     width: 100%;
     height: 100%;
     font: 1em Helvetica;
@@ -106,7 +108,7 @@ footer {
 
 @media all and (max-width: 640px) {
 
-    #main, #page {
+    #main {
         -webkit-flex-flow: row wrap;
         flex-flow: row wrap;
         margin: 50px 0px;
@@ -114,8 +116,6 @@ footer {
     #main section {
         -webkit-flex: 1 1 40%;
         flex: 1 1 40%;
-        -webkit-order: 2;
-        order: 2;
         margin: 5px;
     }
     #main>article, #main>nav, #main>aside {
