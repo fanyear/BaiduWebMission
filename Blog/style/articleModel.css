@@ -72,6 +72,7 @@ nav a:hover{
   height: 60px;
   display: none;
   cursor: pointer;
+  z-index: 100;
 }
 .nav2 span{
   display: inline-block;
@@ -92,6 +93,7 @@ nav a:hover{
   text-align: center;
   background: #313131;
   display: none;
+  z-index: 100;
 }
 .nav2-list a{
   display: inline-block;
@@ -117,7 +119,7 @@ nav a:hover{
     color: #949585;
 }
 
-#main { 
+#main {
     min-height: 400px;
     margin: 0px 6%;
     margin-top: -50px;
@@ -137,16 +139,17 @@ nav a:hover{
   background: #555;
   padding: 10px;
   text-align: center;
+  height: 400px;
 }
 #main aside .head{
 width: 100%;
-height: 150px;
+height: 220px;
 }
 #main aside .head img{
   width: 110px;
   height: 110px;
   border-radius: 55px;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 #main aside  span{
   display: inline-block;
@@ -161,75 +164,42 @@ height: 150px;
   flex: 2 1 70%;
   -webkit-order: 2;
   order: 2;
-  border: 2px blue solid;
+  background: #fff;
+  padding: 20px 20px;
+  color: #000;
 }
-#main section {
-    flex-grow: 1;
-    margin: 10px;
-    -webkit-flex: 1 1 20%;
-    flex: 1 1 20%;
-    -webkit-order: 2;
-    order: 2;
+#main article .title{
+  font-size: 2rem;
+  font-weight: 800;
+
 }
-#main section a {
-    display: inline-block;
-    height: 130px;
-    width: 100%;
-    text-align: center;
-    line-height: 130px;
-    font-weight: 800;
-    font-size: 1.3em;
-    color: #fff;
-    text-decoration: none;
-    margin: 5px 0px;
+#main article .author,.time{
+  font-size: 1rem;
+  display: inline-block;
+  margin-right:  10px;
 }
-#main section:nth-of-type(1) a {
-    background: #9C9B31;
+#main article .content{
+  margin-top: 50px;
 }
-#main section:nth-of-type(2) a {
-    background: #9B3131;
+#main article .content .subhead{
+  display: block;
+  color: #000;
+  font-weight: 800;
+  font-size: 1.5rem;
 }
-#main section:nth-of-type(3) a {
-    background: #329B63;
+#main article .content p{
+  text-indent: 2rem;
+    font-size: 1.3rem;
 }
-#main section:nth-of-type(4) a:nth-of-type(1) {
-    background: #D19B2E;
-}
-#main section:nth-of-type(4) a:nth-of-type(2) {
-    background: #04679E;
-}
-#main section a:hover {
-    box-shadow: 0px 0px 30px #000;
-    font-size: 1.4em;
-}
-#main section div {
-    margin: 5px 0px;
-    width: 100%;
-    height: 260px;
-    display: block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-#main section:nth-of-type(1) div {
-    background-image: url(../img/1.jpeg);
-}
-#main section:nth-of-type(2) div {
-    background-image: url(../img/7.jpg);
-}
-#main section:nth-of-type(3) div {
-    background-image: url(../img/3.jpg);
-}
-#main section:nth-of-type(4) div {
-    background-image: url(../img/5.jpg);
-}
-#main section .photo2 {
-    height: 120px;
+#main article .content img{
+  display: block;
+  margin: 10px auto;
 }
 footer {
-  margin-top: 50px;
+    margin-top: 50px;
     text-align: center;
     line-height: 100px;
+
 }
 @media all and (max-width: 860px) {
     .nav2{
@@ -238,39 +208,15 @@ footer {
     .nav{
       display: none;
     }
+    #main{
+      margin: 0px 3%;
+    }
     #main aside{
       display: none;
     }
-    #main section a {
-        font-size: 1.2em;
+    #main article{
+      margin: 0px;
     }
-    #main section a:hover {
-        box-shadow: 0px 0px 30px #000;
-        font-size: 1.2em;
-    }
-}
 
-/* 窄到已不足以支持三栏 */
 
-@media all and (max-width: 640px) {
-    #main {
-        -webkit-flex-flow: row wrap;
-        flex-flow: row wrap;
-        margin: 50px 0px;
-    }
-    #main section {
-        -webkit-flex: 1 1 40%;
-        flex: 1 1 40%;
-        margin: 5px;
-        min-width: 1px;
-    }
-    #main>article, #main>nav, #main>aside {
-        /* 恢复到文档内的自然顺序 */
-        -webkit-order: 0;
-        order: 0;
-    }
-    #main>nav, #main>aside, header, footer {
-        min-height: 50px;
-        max-height: 50px;
-    }
 }

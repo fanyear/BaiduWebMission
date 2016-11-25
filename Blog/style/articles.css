@@ -143,13 +143,13 @@ nav a:hover{
 }
 #main aside .head{
 width: 100%;
-height: 150px;
+height: 220px;
 }
 #main aside .head img{
   width: 110px;
   height: 110px;
   border-radius: 55px;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 #main aside  span{
   display: inline-block;
@@ -220,6 +220,10 @@ height: 150px;
   border-radius: 20px;
   background: #fff;
   margin: 0px auto;
+}
+#main article section figcaption a:hover{
+  background: #42B0D3;
+  color: #fff;
 }
 footer {
     margin-top: 50px;
