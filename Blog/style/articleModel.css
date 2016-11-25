@@ -194,6 +194,7 @@ height: 220px;
 #main article .content img{
   display: block;
   margin: 10px auto;
+
 }
 footer {
     margin-top: 50px;
@@ -217,6 +218,8 @@ footer {
     #main article{
       margin: 0px;
     }
-
+#main article .content img{
+  width: 80%;
+}
 
 }
