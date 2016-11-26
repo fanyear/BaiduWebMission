@@ -1,0 +1,24 @@
+#item1{
+  background: #1D1F21;
+}
+.bb-content{
+  
+}
+.bb-flipoverlay {
+	background-color: red;
+}
+#item2,#item2 .bb-content{
+  background: #DC6C5F;
+}
+
+#item3,#item3 .bb-content{
+  background: #64B9D2;
+}
+
+#item4,#item4 .bb-content{
+  background: #89B32F;
+}
+
+#item5,#item5 .bb-content{
+  background: #63ACF9;
+}
