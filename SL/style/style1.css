@@ -52,7 +52,7 @@ iframe{
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: row;
-    flex-flow: row; 
+    flex-flow: row;
 }
 .main section {
     flex-grow: 1;
@@ -106,17 +106,41 @@ iframe{
     background-position: center;
     background-size: cover;
 }
-.main section:nth-of-type(1) div{
-  background-image: url(../img/1.jpeg);
+#p1{
+  background-image: url(../imgUs/1.png);
 }
-.main section:nth-of-type(2) div{
-  background-image: url(../img/7.jpg);
+#p2{
+  background-image: url(../imgUs/2.png);
 }
-.main section:nth-of-type(3) div{
-  background-image: url(../img/3.jpg);
+#p3{
+  background-image: url(../imgUs/5.png);
 }
-.main section:nth-of-type(4) div{
-  background-image: url(../img/5.jpg);
+#p4{
+  background-image: url(../imgUs/3.png);
+}
+#p5{
+  background-image: url(../imgUs/9.png);
+}
+#p6{
+  background-image: url(../imgUs/10.png);
+}
+#p7{
+  background-image: url(../imgUs/7.png);
+}
+#p8{
+  background-image: url(../imgUs/8.png);
+}
+#p9{
+  background-image: url(../imgUs/11.png);
+}
+#p10{
+  background-image: url(../imgUs/12.png);
+}
+#p11{
+  background-image: url(../imgUs/23.png);
+}
+#p12{
+  background-image: url(../imgUs/24.png);
 }
 .main section .photo2 {
     height: 130px;
