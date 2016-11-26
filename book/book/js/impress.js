@@ -759,6 +759,8 @@
 
             // Event delegation with "bubbling"
             // Check if event target (or any of its parents is a link)
+             api.next();
+
             var target = event.target;
             while ( ( target.tagName !== "A" ) &&
                     ( target !== document.documentElement ) ) {
@@ -780,6 +782,10 @@
             }
         }, false );
 
+        document.addEventListener( "click", function( event ) {
+          api.next();
+          return;
+        },false)
         // Delegated handler for clicking on step elements
         document.addEventListener( "click", function( event ) {
             var target = event.target;
