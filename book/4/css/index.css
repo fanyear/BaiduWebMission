@@ -502,12 +502,13 @@ background-image: url(../img/24.png);}
 }
 
 .page-9-1 .img_1 {
-	height:auto;width:300px;
+	height:auto;
+	width:300px;
 	position:absolute;
 	left:50%;
 	top:50%;
 	margin-left:-150px;
-	margin-top: -65px;
+	margin-top: -125px;
 	z-index:2;
 	font-size: 20px;
 	line-height: 30px;
@@ -517,12 +518,26 @@ background-image: url(../img/24.png);}
 	padding: 10px;
 	box-sizing: border-box;
 }
-.page-9-1 .img_6 {
-	height:auto;width:25px;
+
+.page-9-1 .img_2 {
+	height:auto;
+	width:100px;
 	position:absolute;
 	left:50%;
-	top:92%;
-	margin-left:-12px;
+	top:50%;
+	margin-left:40px;
+	margin-top: 150px;
+	border-radius: 20px;
+	z-index: 100;
+}
+.page-9-1 .img_3 {
+	height:auto;width:100px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-130px;
+	margin-top: -220px;
+	border-radius: 20px;
 	z-index: 100;
 }
 span{
