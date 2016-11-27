@@ -142,11 +142,11 @@
 	from { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
 }
 
-@-webkit-keyframes moveToRight { 
+@-webkit-keyframes moveToRight {
 	from { }
 	to { -webkit-transform: translateX(100%); }
 }
-@keyframes moveToRight { 
+@keyframes moveToRight {
 	from { }
 	to { -webkit-transform: translateX(100%); transform: translateX(100%); }
 }
@@ -193,12 +193,12 @@
 @-webkit-keyframes moveIconUp {
 	0% { -webkit-transform: translateY(100%); opacity:0;}
 	50% { -webkit-transform: translateY(0%); opacity:1;}
-	100% { -webkit-transform: translateY(-100%); opacity:0;}
+	100% { -webkit-transform: translateY(100%); opacity:0;}
 }
 @keyframes moveIconUp {
 	0% { -webkit-transform: translateY(100%); transform: translateY(100%); opacity:0;}
 	50% { -webkit-transform: translateY(0%); transform: translateY(0%); opacity:1;}
-	100% { -webkit-transform: translateY(-100%); transform: translateY(-100%); opacity:0;}
+	100% { -webkit-transform: translateY(100%); transform: translateY(100%); opacity:0;}
 }
 
 @-webkit-keyframes moveCircle {
