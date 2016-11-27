@@ -82,9 +82,10 @@ body{
 .page-2-1 .img_2 {
 	height:auto;width:200px;
 	position:absolute;
-	left:30%;
-	top:30%;
-	margin-left:-100px;
+	left:50%;
+	top:50%;
+	margin-left:-175px;
+		margin-top: -100px;
 	border-radius: 100px;
 	overflow: hidden;
 	z-index: 100;
@@ -92,18 +93,22 @@ body{
 .page-2-1 .img_3 {
 	height:auto;width:200px;
 	position:absolute;
-	left:75%;
-	top:20%;
-	margin-left:-100px;
+	left:50%;
+	top:50%;
+	margin-left:-25px;
+		margin-top: -70px;
 	border-radius: 100px;
 	overflow: hidden;
 }
 .page-2-1 .img_4 {
-	height:auto;width:20px;
+	height:auto;width:200px;
 	position:absolute;
 	left:50%;
-	top:87%;
-	margin-left:-10px;
+	top:50%;
+	margin-left:-100px;
+	margin-top: -230px;
+	border-radius: 100px;
+	overflow: hidden;
 }
 .page-2-1 .img_5 {
 	height:auto;width:142px;
