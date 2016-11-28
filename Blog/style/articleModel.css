@@ -183,12 +183,20 @@ height: 220px;
 }
 #main article .content .subhead{
   display: block;
+  color: #00B7E9;
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin: 10px 0px;
+}
+#main article .content .subhead2{
+  display: block;
   color: #000;
   font-weight: 800;
   font-size: 1.5rem;
 }
 #main article .content p{
   text-indent: 2rem;
+  line-height: 2rem;
     font-size: 1.3rem;
 }
 #main article .content img{
