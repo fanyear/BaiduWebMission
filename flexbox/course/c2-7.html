@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../style/course.css" media="screen" title="no title">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>CSS3弹性盒子</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav">
+            <span></span>
+            <a href="../guide.html">Welcome</a>
+            <a href="../index.html">Study</a>
+            <a href="../message.html">Message</a>
+            <a href="../contact.html">Contact me</a>
+        </nav>
+
+        <div class="blogHeader">
+            <span>CSS3弹性盒子</span>
+        </div>
+    </header>
+
+
+
+    <div id='main'>
+      <aside class="aside">
+          <span class="chapter">第一章 课程介绍</span>
+          <div class="courses">
+              <a href="c1-1.html">1-1 网页布局</a>
+              <a href="c1-2.html">1-2 flexbox 简介</a>
+          </div>
+
+          <span class="chapter">第二章 容器属性</span>
+          <div class="courses">
+              <a href="c2-1.html">2-1 基本要素</a>
+              <a href="c2-2.html">2-2 创建flex容器</a>
+              <a href="c2-3.html">2-3 flex-direction属性</a>
+              <a href="c2-4.html">2-4 flex-wrap属性</a>
+              <a href="c2-5.html">2-5 flex-flow属性</a>
+              <a href="c2-6.html">2-6 justify-content属性</a>
+              <a href="c2-7.html">2-7 align-items属性</a>
+              <a href="c2-8.html">2-8 align-content属性</a>
+          </div>
+
+
+          <span class="chapter">第三章 项目属性</span>
+          <div class="courses">
+              <a href="c3-1.html">3-1 order属性</a>
+              <a href="c3-2.html">3-2 flex-grow属性</a>
+              <a href="c3-3.html">3-3 flex-shrink属性</a>
+              <a href="c3-4.html">3-4 flex-basis属性</a>
+              <a href="c3-5.html">3-5 flex属性</a>
+              <a href="c3-6.html">3-6 align-self属性</a>
+          </div>
+
+      </aside>
+        <article class="article">
+            <a class="previous pageBtn" href="c2-6.html">上一页</a>
+            <a class="next pageBtn" href="c2-8.html">下一页</a>
+            <span>2-7 align-items属性</span>
+            <div class="content">
+            <p>align-items属性定义项目在交叉轴上如何对齐。</p>
+            <textarea name="name" rows="4" >.box {
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}</textarea>
+            <p>它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。</p>
+            <textarea name="name" rows="8" >flex-start：交叉轴的起点对齐。
+flex-end：交叉轴的终点对齐。
+center：交叉轴的中点对齐。
+baseline: 项目的第一行文字的基线对齐。
+stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</textarea>
+
+            <img src="../img/2-7-1.png" alt="">
+            <img src="../img/2-7-2.png" alt="">
+            <img src="../img/2-7-3.png" alt="">
+
+            </div>
+            <!--<a class="previous pageBtn" href="#">上一页</a>-->
+            <a class="previous pageBtn" href="c2-6.html">上一页</a>
+            <a class="next pageBtn" href="c2-8.html">下一页</a>
+        </article>
+    </div>
+
+    <footer>版权所有 <strong>©</strong> 王薇</footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
