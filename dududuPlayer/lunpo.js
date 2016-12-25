@@ -34,7 +34,7 @@ var playLunpo = function() {
 	clearInterval(playLunpoInterval)
 	playLunpoInterval = setInterval(function() {
 		nLunpo = changePos(nLunpo)
-	}, 1000)
+	}, 3000)
 }
 
 var stopLunpo = function() {
