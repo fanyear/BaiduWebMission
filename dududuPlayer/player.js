@@ -1,6 +1,7 @@
 
 //play
 var play = function() {
+	playStatus = true
 	var gan = e('#id-gan')
 	var ganMove = 'translateX(-50%) rotateZ(-5deg)'
 	var music = e('#id-audio-player')
@@ -19,6 +20,7 @@ var play = function() {
 
 //stop
 var stop = function() {
+	playStatus = false
 	var cd = e('#id-rotate-cd')
 	clearInterval(cd.interval)
 	var gan = e('#id-gan')
