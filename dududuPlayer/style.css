@@ -1,4 +1,5 @@
 html {
+    font-family: "Microsoft YaHei";
     font-size: 10px;
 }
 html, body {
@@ -264,10 +265,10 @@ main {
     text-align: center;
 }
 .music-info-title .music-name ,.music-info .music-name{
-    width: 60%;
+    width: 58%;
 }
 .music-info-title .music-duration,.music-info .music-duration{
-    width: 10%;
+    width: 8%;
 }
 .music-info-title .music-singer,.music-info .music-singer{
     width: 28%;
