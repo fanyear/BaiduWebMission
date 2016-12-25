@@ -1,0 +1,48 @@
+
+#container {
+  width:700px;
+  background: #aaa;
+  height: 400px;
+  display: flex;
+  flex-direction:column;
+  margin: 0px auto;
+  text-align: center;
+  overflow: hidden;
+  flex-direction:row;
+}
+#container a {
+  width:20%;
+  height: 70px;
+  line-height: 50px;
+  background: tomato;
+  font-size: 1.5rem;
+  border: 10px solid #2D6EB0;
+  box-sizing: content-box;
+  flex-basis:20%; 
+}
+#choice{
+  margin-top: 20px;
+}
+#choice button {
+  outline: none;
+  border: none;
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  background: tomato;
+  font-size: 1.5rem;
+  line-height: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+#choice a{
+  display: inline-block;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  background: #2D6EB0;
+  font-size: 1.5rem;
+  line-height: 20px;
+  color: #fff;
+}

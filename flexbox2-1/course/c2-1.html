@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../style/course.css" media="screen" title="no title">
+     <title>CSS3弹性盒子</title>
+</head>
+
+<body>
+
+  <header>
+      <nav class="nav">
+          <span></span>
+          <a href="../guide.html">Welcome</a>
+          <a href="../index.html">Study</a>
+      </nav>
+
+      <div class="blogHeader">
+          <span>CSS3弹性盒子</span>
+      </div>
+  </header>
+
+
+
+  <div id='main'>
+    <aside class="aside">
+        <span class="chapter">第一章 课程介绍</span>
+        <div class="courses">
+            <a href="c1-1.html">1-1 网页布局</a>
+            <a href="c1-2.html">1-2 flexbox 简介</a>
+        </div>
+
+        <span class="chapter">第二章 容器属性</span>
+        <div class="courses">
+            <a href="c2-1.html">2-1 基本要素</a>
+            <a href="c2-2.html">2-2 创建flex容器</a>
+            <a href="c2-3.html">2-3 flex-direction属性</a>
+            <a href="c2-4.html">2-4 flex-wrap属性</a>
+            <a href="c2-5.html">2-5 flex-flow属性</a>
+            <a href="c2-6.html">2-6 justify-content属性</a>
+            <a href="c2-7.html">2-7 align-items属性</a>
+            <a href="c2-8.html">2-8 align-content属性</a>
+        </div>
+
+
+        <span class="chapter">第三章 项目属性</span>
+        <div class="courses">
+            <a href="c3-1.html">3-1 order属性</a>
+            <a href="c3-2.html">3-2 flex-grow属性</a>
+            <a href="c3-3.html">3-3 flex-shrink属性</a>
+            <a href="c3-4.html">3-4 flex-basis属性</a>
+            <a href="c3-5.html">3-5 flex属性</a>
+            <a href="c3-6.html">3-6 align-self属性</a>
+        </div>
+        <span class="chapter">第四章 实战</span>
+
+        <div class="courses">
+            <a href="c4-1.html">4-1 flex-direction属性</a>
+            <a href="c4-2.html">4-2 flex-wrap属性</a>
+            <a href="c4-3.html">4-3 order属性</a>
+            <a href="c4-4.html">4-4 flex-grow属性</a>
+        </div>
+
+    </aside>
+        <article class="article">
+            <a class="previous pageBtn" href="c1-2.html">上一页</a>
+            <a class="next pageBtn" href="c2-2.html">下一页</a>
+            <span>2-1 基本要素</span>
+            <div class="content">
+
+                <p> 因为Flexbox是整个模块，而不是一个属性，它涉及很多东西，包括其整个组属性。他们当中一部分是容器（父元素，称为“伸缩容器”），另一部分是子元素（称为“伸缩项目”）。
+                </p>
+                <p>常规布局是基于块和内联流方向，而Flex布局是基于flex-flow流。请看看来自w3c规范中的这张图，解释了flex布局的主要思想。
+                </p>
+                <img src="../img/2-1-1.png" alt="">
+                <p>主轴（main axis）：伸缩容器的主轴，伸缩项目主要沿着这条轴进行排列布局。小心，它不一定是水平的；这主要取决于“justify-content”属性（详细见下文）。
+                </p>
+                <p>主轴起点（main-start）和主轴终点（main-end）：伸缩项目放置在伸缩容器内从主轴起点（main-start）向主轴终点（main-start）方向。
+                </p>
+                <p>主轴尺寸（main size）：伸缩项目在主轴方向的宽度或高度就是主轴的尺寸。伸缩项目主要的大小属性要么是宽度，要么是高度属性，由哪一个对着主轴方向决定。
+                </p>
+                <p>侧轴（cross axis）：垂直于主轴称为侧轴。它的方向主要取决于主轴方向。
+                </p>
+                <p>侧轴起点（cross-start）和侧轴终点（cross-end）：伸缩行的配置从容器的侧轴起点边开始，往侧轴终点边结束。
+                </p>
+                <p>侧轴尺寸（cross size）：伸缩项目的在侧轴方向的宽度或高度就是项目的侧轴长度，伸缩项目的侧轴长度属性是「width」或「height」属性，由哪一个对着侧轴方向决定。
+                </p>
+            </div>
+            <!--<a class="previous pageBtn" href="#">上一页</a>-->
+            <a class="previous pageBtn" href="c1-2.html">上一页</a>
+            <a class="next pageBtn" href="c2-2.html">下一页</a>
+        </article>
+    </div>
+
+    <footer>版权所有 <strong>©</strong> 王薇</footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
