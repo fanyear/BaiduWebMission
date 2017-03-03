@@ -41,12 +41,70 @@
         <a class='back' id='id-go-back'>
             <img src="../img/back.png" alt="返回" >
         </a>
-        <div class="advance-order" id='id-advance-order'>
+        <div class="advance-order go-to-top" id='id-advance-order'>
             <img src="../img/cancel.png" id='id-cancel-order'alt="cancel">
+            <span class='advance-order-cell'>
+                <img src="../img/goods1-s.png" class='advance-order-cell-photo' alt="">
+                <span class='advance-order-cell-info'>
+                    <span class='advance-order-cell-goods'>折叠全自动帐篷</span>
+                    <span class='advance-order-cell-details'>颜色 : 天蓝</span>
+                    <span class='advance-order-cell-sum'>合计: ¥<span class='advance-order-cell-sum-price'>65</span></span>
+                    <span class='advance-order-cell-price'>单价: ¥<span class='advance-order-cell-single-price'>65</span></span>
+                    <span class='advance-order-cell-control'>
+                        <span class='advance-order-cell-number-control'>
+                            <span class='advance-order-cell-number-button cut' data-number='-1'></span>
+                            <span class='advance-order-cell-number' >1</span>
+                            <span class='advance-order-cell-number-button add' data-number='1'></span>
+                        </span>
+                        <span class='advance-order-cell-delete'>删除</span>
+                    </span>
+                </span>
+            </span>
+            <span class='advance-order-cell'>
+                <img src="../img/goods1-s.png" class='advance-order-cell-photo' alt="">
+                <span class='advance-order-cell-info'>
+                    <span class='advance-order-cell-goods'>折叠全自动帐篷</span>
+                    <span class='advance-order-cell-details'>颜色 : 军绿</span>
+                    <span class='advance-order-cell-sum'>合计: ¥<span class='advance-order-cell-sum-price'>65</span></span>
+                    <span class='advance-order-cell-price'>单价: ¥<span class='advance-order-cell-single-price'>65</span></span>
+                    <span class='advance-order-cell-control'>
+                        <span class='advance-order-cell-number-control'>
+                            <span class='advance-order-cell-number-button cut' data-number='-1'></span>
+                            <span class='advance-order-cell-number' >1</span>
+                            <span class='advance-order-cell-number-button add' data-number='1'></span>
+                        </span>
+                        <span class='advance-order-cell-delete'>删除</span>
+                    </span>
+                </span>
+            </span>
             <span id='id-advance-submit'>提交订单</span>
         </div>
         <div class="add-advance-order" id='add-advance-order'>
             <img src="../img/cancel.png" id='id-cancel-add' alt="cancel">
+            <div class="goods-info">
+                <img id='id-goods-info-photo' src="../img/goods1-s.png" alt="">
+                <div class="goods-info-details">
+                    <span class='goods-name'>折叠全自动帐篷 3-4人</span>
+                    <span class='goods-price'>¥65</span>
+                </div>
+            </div>
+            <div class="goods-specifications">
+                <span class='goods-specifications-title'>规格</span>
+                <div class="goods-specifications-cell">
+                    <span class='goods-specifications-name'>颜色 :</span>
+                    <span class='goods-specifications-option goods-specifications-active'>军绿</span>
+                    <span class='goods-specifications-option'>天蓝</span>
+                </div>
+            </div>
+            <div class="goods-number">
+                <span class='number-text'>预定数量</span>
+                <span class='number-control'>
+                    <span class='number-button cut' data-number='-1'></span>
+                    <span class='number' id='id-number'>1</span>
+                    <span class='number-button add' data-number='1'></span>
+                </span>
+            </div>
+            <span id='id-add-submit'>确认</span>
         </div>
         <script src='../js/gua.js'></script>
         <script src='../js/goods-details.js'></script>
