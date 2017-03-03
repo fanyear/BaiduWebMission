@@ -8,6 +8,8 @@ var bindEvents = function() {
     bindEventChangeNumber()
     bindEventAdvanceOrderChangeNumber()
     bindEventDelete()
+    bindEventEnsure()
+    bindEventSubmit()
 }
 
 //绑定查看订单事件
@@ -17,6 +19,26 @@ var bindEventCheckAdvanceOrder = function() {
         var advanceOrder = e('#id-advance-order')
         removeClass(advanceOrder, 'go-to-bottom1')
         addClass(advanceOrder, 'go-to-top')
+    })
+}
+
+//绑定提交订单事件
+var bindEventSubmit= function() {
+    var element = e('#id-advance-submit')
+    bindEvent(element, 'click', function() {
+        var advanceOrder = e('#id-advance-order')
+        removeClass(advanceOrder, 'go-to-top')
+        addClass(advanceOrder, 'go-to-bottom1')
+    })
+}
+
+//绑定确认添加订单事件
+var bindEventEnsure = function() {
+    var element = e('#id-add-submit')
+    bindEvent(element, 'click', function() {
+        var advanceOrder = e('#add-advance-order')
+        removeClass(advanceOrder, 'go-to-top2')
+        addClass(advanceOrder, 'go-to-bottom2')
     })
 }
 
@@ -99,7 +121,7 @@ var bindEventAdvanceOrderChangeNumber = function() {
                 var singleCell = find(this, '.advance-order-cell-single-price')
                 var singelPrice = parseInt(singleCell.innerHTML)
                 var sumCell = find(this, '.advance-order-cell-sum-price')
-                sumCell.innerHTML = targetNumber * singelPrice  
+                sumCell.innerHTML = targetNumber * singelPrice
             }
         })
     }
