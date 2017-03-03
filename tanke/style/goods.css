@@ -1,0 +1,58 @@
+html {
+    font-size: 10px;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background: #ddd;
+}
+* {
+    box-sizing: border-box;
+}
+.list {
+    display: block;
+    height: 150%;
+}
+.list-box {
+    display: block;
+    margin: 2% 2%;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+}
+.list-box-info {
+    height: 100px;
+    padding: 10px 20px; 
+    color: #666;
+    font-size: 2rem;
+}
+.list-box-name {
+    display: block;
+    height: 4rem;
+}
+.list-box-price {
+    display: inline-block;
+    float: left;
+    color: #FF4D4E;
+    font-size: 2.5rem;
+}
+.list-box-book {
+    display: inline-block;
+    float: right;
+    background: #FF4D4E;
+    color: #fff;
+    font-size: 1.7rem;
+    margin: -5px 5px;
+    padding: 8px;
+    border-radius: 7px;
+}
+.list-box a {
+    display: block;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
